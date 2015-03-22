@@ -1,7 +1,11 @@
 $(document).ready(function(){
-  $("#hi").click(function () {
-    watchFunc();
-    var coords = $("#coordinates").val();
+	//Starter geoposisjonering
+	watchFunc();
+	//
+$("#hi").click(function () {
+	$("#resultat").empty();
+    var coords = $("#locationInfo").text();
+	console.log(coords);
     var splits = coords.split(", ");
     var lat = splits[0];
     var long = splits[1];
@@ -10,8 +14,8 @@ $(document).ready(function(){
     var kvarteretlong = 5.321825;
     
     var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
-    $("#resultat").append(a);
-});
+    $("#resultat").append(a + " km");
+		 });
 });
 
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
@@ -38,8 +42,8 @@ function successCallback(position)
     	document.getElementById("locationInfo").innerHTML = ('Unable to acquire your location');
 		}
 		
-		document.getElementById("locationInfo").innerHTML = "Latitude: " +
-		position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+		document.getElementById("locationInfo").innerHTML =
+		position.coords.latitude + ", " + position.coords.longitude;
 }
 function errorCallback(error)
 {
@@ -72,3 +76,14 @@ function watchFunc()
       document.getElementById("locationInfo").innerHTML = "Geolocation is not supported.";
    }
 }
+function stopWatchFunc() 
+{
+   if (navigator.geolocation) 
+   {
+      navigator.geolocation.clearWatch(watchId);
+   } 
+   else 
+   {
+      document.getElementById("locationInfo").innerHTML = "Geolocation is not supported.";
+   }
+}  
