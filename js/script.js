@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$("#hi").click(function () {
 		$("#resultat").empty();
 		var coords = $("#locationInfo").text();
-		console.log(coords);
+		//console.log(coords);
 		var splits = coords.split(", ");
 		var lat = splits[0];
 		var long = splits[1];
@@ -15,6 +15,13 @@ $(document).ready(function(){
 
 		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
 		$("#resultat").append(a.toFixed(2) + " km");
+		//Henter greier ut frå JSON filer
+		$.getJSON( "../JSON/lokaler.json", function( json ) {
+			console.log("heei");
+			$.each(json.konsertlokaler.lokale, function( key, value ) {
+				console.log(key + ": " + value.location);
+			});
+		});
 	});
 });
 
@@ -86,4 +93,4 @@ function stopWatchFunc()
 	{
 		document.getElementById("locationInfo").innerHTML = "Geolocation is not supported.";
 	}
-}  
+}
