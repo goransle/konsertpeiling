@@ -4,6 +4,7 @@ $(document).ready(function(){
 	//
 	$("#hi").click(function () {
 		$("#resultat").empty();
+		$("#lokaler").empty();
 		var coords = $("#locationInfo").text();
 		//console.log(coords);
 		var splits = coords.split(", ");
@@ -15,13 +16,7 @@ $(document).ready(function(){
 
 		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
 		$("#resultat").append(a.toFixed(2) + " km");
-		//Henter greier ut frå JSON filer
-		$.getJSON( "../JSON/lokaler.json", function( json ) {
-			console.log("heei");
-			$.each(json.konsertlokaler.lokale, function( key, value ) {
-				console.log(key + ": " + value.location);
-			});
-		});
+		finnLokaler(coords, 3);
 	});
 });
 
@@ -93,4 +88,26 @@ function stopWatchFunc()
 	{
 		document.getElementById("locationInfo").innerHTML = "Geolocation is not supported.";
 	}
+}
+
+//Forsøk på funksjon som finner lokaler innen ein viss distanse
+function finnLokaler(posisjon, distanse){
+	var splits = posisjon.split(", ");
+	var lat = splits[0];
+	var long = splits[1];
+	var lokaler = [];
+	//Henter greier ut frå JSON filer
+		$.getJSON( "../JSON/lokaler.json", function( json ) {
+			$.each(json.konsertlokaler.lokale, function( key, value ) {
+				var x = getDistanceFromLatLonInKm(lat,long,value.lat,value.long);
+				if(x < distanse){
+					//lokaler[0] = "hø";
+					//får gjort dette, men ikkje lagt til i array? :S
+					$("#lokaler").append(value.location + " " + x.toFixed(2) + " km" + "<br />");
+				}
+				else{};
+				
+			});
+			return lokaler[0];
+		});
 }

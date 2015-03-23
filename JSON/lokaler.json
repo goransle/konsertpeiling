@@ -2,74 +2,45 @@
     "konsertlokaler": {
         "lokale": [
             {
-                    "id": 1,
-                    "songlocation": "lyd/dubstep.mp3",
-                    "cover": "data/cover/cover1.jpg", 
+                "id": 1,
                 "lat"  : "60.388422",
-                "lang" : "5.324013",
-                "location" : "Utfor l. meltzershus",
-                "title": "Bratwurst",
-                "artist": "Pølse"
+                "long" : "5.324013",
+                "location" : "Utfor l. meltzershus"
             },
             {
-                    "id": 2,
-                    "songlocation": "lyd/dubstep.mp3",
-                    "cover": "data/cover/cover2.jpg", 
+                "id": 2,
                 "lat"  : "60.387975", 
-                "lang" : "5.324491",
-                "location" : "Oppe med kaffibutikken",
-                "title": "Hjerteinfarkt",
-                "artist": "Lege"
+                "long" : "5.324491",
+                "location" : "Oppe med kaffibutikken"
             },
             {
-                    "id": 3,
-                    "songlocation": "lyd/dubstep.mp3",
-                    "cover": "data/cover/cover3.jpg", 
-                "title": "Skaugum",
+                "id": 3,
                 "lat"  : "60.388176", 
-                "lang" : "5.325043",
-                "location" : "Ved biblioteket",
-                "artist": "Konge"
+                "long" : "5.325043",
+                "location" : "Ved biblioteket"
             },
             {
-                    "id": 4,
-                    "songlocation": "lyd/dubstep.mp3",
-                    "cover": "data/cover/cover4.jpg", 
-                "title": "Cosmopolitan",
+                "id": 4,
                 "lat"  : "60.388572", 
-                "lang" : "5.323454",
-                "location" : "Ved basketball-banen",
-                "artist": "Bar"
+                "long" : "5.323454"
             },
             {            
-                    "id": 5,
-                    "songlocation": "lyd/dubstep.mp3",
-                    "cover": "data/cover/cover5.jpg", 
-                "title": "Hey Girl",
-                                "lat"  : "60.388147", 
-                "lang" : "5.323561",
-                "location" : "Bak u. phil",
-                "artist": "Fyr"
+                "id": 5,
+                "lat"  : "60.388147", 
+                "long" : "5.323561",
+                "location" : "Bak u. phil"
             },
             {               
-                    "id": 6,
-                    "songlocation": "lyd/dubstep.mp3",
-                    "cover": "data/cover/cover6.jpg", 
-                "title": "Summer Freeze",
-                                "lat"  : "60.387797",
-                "lang" : "5.323156",
-                "location" : "Nesten på museplass",
-                "artist": "McMusic"
+                "id": 6,
+                "lat"  : "60.387797",
+                "long" : "5.323156",
+                "location" : "Nesten på museplass"
             },
             {
-                    "id": 7,
-                    "songlocation": "lyd/dubstep.mp3",
-                    "cover": "data/cover/cover7.jpg", 
-                "title": "Lost in Jazz",
-                                "lat"  : "59.797248",
-                "lang" : "5.233198",
-                "location" : "Ved vegen",
-                "artist": "Jaga"
+                "id": 7,
+                "location": "Lost in Jazz",
+                "lat"  : "59.797248",
+                "long" : "5.233198"
             }
         ]
     }
