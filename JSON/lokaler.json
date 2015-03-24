@@ -1,47 +1,76 @@
 {
-    "konsertlokaler": {
-        "lokale": [
-            {
-                "id": 1,
-                "lat"  : "60.388422",
-                "long" : "5.324013",
-                "location" : "Utfor l. meltzershus"
-            },
-            {
-                "id": 2,
-                "lat"  : "60.387975", 
-                "long" : "5.324491",
-                "location" : "Oppe med kaffibutikken"
-            },
-            {
-                "id": 3,
-                "lat"  : "60.388176", 
-                "long" : "5.325043",
-                "location" : "Ved biblioteket"
-            },
-            {
-                "id": 4,
-                "lat"  : "60.388572", 
-                "long" : "5.323454"
-            },
-            {            
-                "id": 5,
-                "lat"  : "60.388147", 
-                "long" : "5.323561",
-                "location" : "Bak u. phil"
-            },
-            {               
-                "id": 6,
-                "lat"  : "60.387797",
-                "long" : "5.323156",
-                "location" : "Nesten på museplass"
-            },
-            {
-                "id": 7,
-                "location": "Lost in Jazz",
-                "lat"  : "59.797248",
-                "long" : "5.233198"
-            }
-        ]
-    }
+	"konserter": {
+		"lokaler": [
+			{
+				"id": 1,
+				"lat"  : "60.388422",
+				"long" : "5.324013",
+				"location" : "Utfor l. meltzershus"
+			},
+			{
+				"id": 2,
+				"lat"  : "60.387975", 
+				"long" : "5.324491",
+				"location" : "Oppe med kaffibutikken"
+			},
+			{
+				"id": 3,
+				"lat"  : "60.388176", 
+				"long" : "5.325043",
+				"location" : "Ved biblioteket"
+			},
+			{
+				"id": 4,
+				"lat"  : "60.388572", 
+				"long" : "5.323454"
+			},
+			{            
+				"id": 5,
+				"lat"  : "60.388147", 
+				"long" : "5.323561",
+				"location" : "Bak u. phil"
+			},
+			{               
+				"id": 6,
+				"lat"  : "60.387797",
+				"long" : "5.323156",
+				"location" : "Nesten på museplass"
+			},
+			{
+				"id": 7,
+				"location": "Lost in Jazz",
+				"lat"  : "59.797248",
+				"long" : "5.233198"
+			}
+		],
+		"konserter": [
+			{
+				"dato": "21-02-2015",
+				"artist": "Gatas Parliament",
+				"lokaleID": 6,
+				"lokale": "Kvarteret"
+			},
+			{
+				"dato": "05-02-2015",
+				"artist": "Hell's Pilgrims",
+				"lokaleID": 2,
+				"lokale": "Garage"
+			}
+		],
+		"artister": [
+			{
+				"navn": "GatasParliament",
+				"sanger": [
+					{
+						"navn": "Bush 2.0",
+						"filplassering": ""
+					},
+					{
+						"navn": "Bush 3.0",
+						"filplassering": ""
+					}
+				]
+			}
+		]
+	}
 }

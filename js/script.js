@@ -5,6 +5,8 @@ $(document).ready(function(){
 	$("#hi").click(function () {
 		$("#resultat").empty();
 		$("#lokaler").empty();
+		$("#artister").empty();
+		$("#konserter").empty();
 		var coords = $("#locationInfo").text();
 		//console.log(coords);
 		var splits = coords.split(", ");
@@ -17,6 +19,8 @@ $(document).ready(function(){
 		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
 		$("#resultat").append(a.toFixed(2) + " km");
 		finnLokaler(coords, 3);
+		finnKonserter("Kvarteret");
+		finnSanger("GatasParliament");
 	});
 });
 
@@ -97,17 +101,41 @@ function finnLokaler(posisjon, distanse){
 	var long = splits[1];
 	var lokaler = [];
 	//Henter greier ut frå JSON filer
-		$.getJSON( "../JSON/lokaler.json", function( json ) {
-			$.each(json.konsertlokaler.lokale, function( key, value ) {
-				var x = getDistanceFromLatLonInKm(lat,long,value.lat,value.long);
-				if(x < distanse){
-					//lokaler[0] = "hø";
-					//får gjort dette, men ikkje lagt til i array? :S
-					$("#lokaler").append(value.location + " " + x.toFixed(2) + " km" + "<br />");
-				}
-				else{};
-				
-			});
-			return lokaler[0];
+	$.getJSON( "../JSON/lokaler.json", function( json ) {
+		$.each(json.konserter.lokaler, function( key, value ) {
+			var x = getDistanceFromLatLonInKm(lat,long,value.lat,value.long);
+			if(x < distanse){
+				//lokaler[0] = "hø";
+				//får gjort dette, men ikkje lagt til i array? :S
+				$("#lokaler").append(value.location + " " + x.toFixed(2) + " km" + "<br />");
+			}
+			else{};
+
 		});
+		//return lokaler[0];
+	});
+}
+//Finner konserter for et gitt lokale, få inn dato?
+function finnKonserter(lokale){
+	$.getJSON( "../JSON/lokaler.json", function( json ){
+		$.each(json.konserter.konserter, function( key, value ){
+			if(value.lokale == lokale){
+				$("#konserter").append(value.artist + " spiller på " + value.lokale + " den " + value.dato + "<br />");
+			}
+		});
+	});
+}
+//finner sangene til ein gitt artist
+// får finne ut kva denne faktisk skal gjere
+function finnSanger(artist){
+	$.getJSON( "../JSON/lokaler.json", function( json ){
+		$.each(json.konserter.artister, function( key, value){
+			if(value.navn === artist){
+				$("#artister").append("<strong>" +value.navn +"</strong>: <br />");
+				$.each(value.sanger, function(x, y){
+					$("#artister").append(y.navn + "<br />");
+				});
+			}
+		});
+	});
 }
