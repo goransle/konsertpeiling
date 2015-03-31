@@ -7,6 +7,7 @@ $(document).ready(function(){
 		$("#lokaler").empty();
 		$("#artister").empty();
 		$("#konserter").empty();
+		$("#spiller").empty();
 		var coords = $("#locationInfo").text();
 		//console.log(coords);
 		var splits = coords.split(", ");
@@ -21,6 +22,7 @@ $(document).ready(function(){
 		finnLokaler(coords, 3);
 		finnKonserter("Kvarteret");
 		finnSanger("GatasParliament");
+		playSongs();
 	});
 });
 
@@ -133,9 +135,24 @@ function finnSanger(artist){
 			if(value.navn === artist){
 				$("#artister").append("<strong>" +value.navn +"</strong>: <br />");
 				$.each(value.sanger, function(x, y){
-					$("#artister").append(y.navn + "<br />");
+					$("#artister").append("<span class='sang'>" + y.navn + "</span><br />");
 				});
 			}
+		});
+	});
+}
+
+//Veldig veldig basic musikk spiller
+//Tar siste sangen den finner og legger den til i audio spiller
+function playSongs(){
+	$.getJSON( "../JSON/lokaler.json", function( json ){
+		$.each(json.konserter.artister, function( key, value){
+			$.each(value.sanger, function(x, y){
+				if(y.filplassering !== ''){
+					$("#spiller").attr('src', y.filplassering);
+					console.log(y.filplassering);
+				}
+			});
 		});
 	});
 }

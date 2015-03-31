@@ -63,10 +63,23 @@
 				"sanger": [
 					{
 						"navn": "Bush 2.0",
-						"filplassering": ""
+						"filplassering": "/media/medicines.mp3"
 					},
 					{
 						"navn": "Bush 3.0",
+						"filplassering": ""
+					}
+				]
+			},
+			{
+				"navn": "GatasParliament 2",
+				"sanger": [
+					{
+						"navn": "Bush 2.2",
+						"filplassering": "/media/medicines.mp3"
+					},
+					{
+						"navn": "Bush 3.3",
 						"filplassering": ""
 					}
 				]
