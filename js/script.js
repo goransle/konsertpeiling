@@ -21,10 +21,11 @@ $(document).ready(function(){
 		$("#resultat").append(a.toFixed(2) + " km");
 		finnLokaler(coords, 3);
 		finnKonserter("Kvarteret");
-		finnSanger("GatasParliament");
+		finnSanger("Gatas Parliament");
 		playSongs();
 	});
 });
+
 
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 	var R = 6371; // Radius of the earth in km
@@ -124,7 +125,7 @@ function finnKonserter(lokale){
 			if(value.lokale == lokale){
 				$("#konserter").append(value.artist + " spiller på " + value.lokale + " den " + value.dato + "<br />");
 			}
-		});
+		}); 
 	});
 }
 //finner sangene til ein gitt artist
