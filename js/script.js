@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$("#lokaler").empty();
 		$("#artister").empty();
 		$("#konserter").empty();
-		$("#spiller").empty();
+		spilleliste.remove(0);
 		var coords = $("#locationInfo").text();
 		//console.log(coords);
 		var splits = coords.split(", ");
@@ -24,6 +24,26 @@ $(document).ready(function(){
 		finnSanger("Gatas Parliament");
 		playSongs();
 	});
+	
+	//bruker jplayer http://jplayer.org/latest/demo-02-jPlayerPlaylist/
+	var spilleliste = new jPlayerPlaylist({
+  jPlayer: "#jquery_jplayer_1",
+  cssSelectorAncestor: "#jp_container_1"
+}, [
+  {
+    title:"Medicines",
+    artist:"The Taxpayers",
+    mp3:"/media/medicines.mp3",
+    poster: "/media/medicines.jpg"
+  }
+], {
+  playlistOptions: {
+    enableRemoveControls: true
+  },
+  supplied: "mp3",
+  smoothPlayBar: true,
+  keyEnabled: true,
+  audioFullScreen: true // Allows the audio poster to go full screen via keyboard
 });
 
 
@@ -150,10 +170,16 @@ function playSongs(){
 		$.each(json.konserter.artister, function( key, value){
 			$.each(value.sanger, function(x, y){
 				if(y.filplassering !== ''){
-					$("#spiller").attr('src', y.filplassering);
+					//$("#spiller").attr('src', y.filplassering);
+					spilleliste.add({
+						title: y.navn,
+						artist: value.navn,
+						mp3: y.filplassering
+					});
 					console.log(y.filplassering);
 				}
 			});
 		});
 	});
 }
+	});
