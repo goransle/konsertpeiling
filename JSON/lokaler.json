@@ -3,44 +3,21 @@
 		"lokaler": [
 			{
 				"id": 1,
-				"lat"  : "60.388422",
-				"long" : "5.324013",
-				"location" : "Utfor l. meltzershus"
+				"lat"  : "60.385064",
+				"long" : "5.324460",
+				"location" : "Hulen"
 			},
 			{
 				"id": 2,
-				"lat"  : "60.387975", 
-				"long" : "5.324491",
-				"location" : "Oppe med kaffibutikken"
+				"lat"  : "60.389769", 
+				"long" : "5.321782",
+				"location" : "Det Akademiske Kvarter"
 			},
 			{
 				"id": 3,
-				"lat"  : "60.388176", 
-				"long" : "5.325043",
-				"location" : "Ved biblioteket"
-			},
-			{
-				"id": 4,
-				"lat"  : "60.388572", 
-				"long" : "5.323454"
-			},
-			{            
-				"id": 5,
-				"lat"  : "60.388147", 
-				"long" : "5.323561",
-				"location" : "Bak u. phil"
-			},
-			{               
-				"id": 6,
-				"lat"  : "60.387797",
-				"long" : "5.323156",
-				"location" : "Nesten på museplass"
-			},
-			{
-				"id": 7,
-				"location": "Lost in Jazz",
-				"lat"  : "59.797248",
-				"long" : "5.233198"
+				"lat"  : "60.389427", 
+				"long" : "5.323747",
+				"location" : "Garage"
 			}
 		],
 		"konserter": [
@@ -59,31 +36,147 @@
 		],
 		"artister": [
 			{
-				"navn": "Gatas Parliament",
+				"navn": "Bergen Filharmoniske Orkester",
+				"sjanger": "",
 				"sanger": [
 					{
-						"navn": "Bush 2.0",
-						"filplassering": "/media/medicines.mp3"
-					},
-					{
-						"navn": "Bush 3.0",
-						"filplassering": ""
+						"navn": "Bojarenes Inntogsmarsj",
+						"filplassering": "/media/Bergen Filharmoniske Orkester - Bojarenes Inntogsmars.mp3"
 					}
 				]
 			},
 			{
-				"navn": "Gatas Parliament 2",
+				"navn": "Cody Simpson",
+				"sjanger": "",
 				"sanger": [
 					{
-						"navn": "Bush 2.2",
-						"filplassering": ""
-					},
-					{
-						"navn": "Bush 3.3",
-						"filplassering": ""
+						"navn": "La Da Dee",
+						"filplassering": "/media/Cody Simpson - La Da Dee.mp3"
 					}
 				]
-			}
+			},
+			{
+				"navn": "Ebbot Lundberg",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "Dansa På Min Grav",
+						"filplassering": "/media/Ebbot Lundberg - Dansa på min grav.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Egil Olsen",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "California",
+						"filplassering": "/media/Egil Olsen - California.mp3"
+					},
+					{
+						"navn": "Bombastic",
+						"filplassering": "/media/egil olsen -bombastic.m4a"
+					}
+				]
+			},
+			{
+				"navn": "Eva & The Heartmaker",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "Gone In a Flash",
+						"filplassering": "/media/Eva & The Heartmaker - Gone In A Flash.mp3"
+					},
+					{
+						"navn": "Told You",
+						"filplassering": "/media/Eva & The Heartmaker - Told You.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Herman's Hermits",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "No Milk Today",
+						"filplassering": "/media/Herman's Hermits - No Milk Today.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Jaa9 & OnklP",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "Glir Forbi",
+						"filplassering": "/media/Jaa9 & OnklP - Glir Forbi.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Katzenjammer",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "Rock - Paper - Scissorsi",
+						"filplassering": "/media/Katzenjammer - Rock - Paper - Scissors.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Love Antell",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "Stjärna Där",
+						"filplassering": "/media/Love Antell - Stjärna Där.mp3"
+					}
+				]
+			},
+			{
+				"navn": "TOBB",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "@ Borggården",
+						"filplassering": "/media/TOBB @ BORGGÅRDEN 2012.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Triggerfinger",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "I Follow Rivers",
+						"filplassering": "/media/Triggerfinger - I follow Rivers.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Vamp",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "Liten Fuggel",
+						"filplassering": "/media/Vamp - Liten Fuggel.mp3"
+					},
+					{
+						"navn": "Tir N'a Noir",
+						"filplassering": "/media/Vamp - Tir N'a Noir.mp3"
+					}
+				]
+			},
+			{
+				"navn": "Vestlandsfanden",
+				"sjanger": "",
+				"sanger": [
+					{
+						"navn": "Sitt Heilt i Ro",
+						"filplassering": "/media/Vestlandsfanden - Sitt heilt i ro.mp3"
+					}
+				]
+			}	
 		]
 	}
 }

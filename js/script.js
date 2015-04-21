@@ -3,11 +3,11 @@ $(document).ready(function(){
 	watchFunc();
 	//
 	$("#hi").click(function () {
+		spilleliste.remove();
 		$("#resultat").empty();
 		$("#lokaler").empty();
 		$("#artister").empty();
 		$("#konserter").empty();
-		spilleliste.remove(0);
 		var coords = $("#locationInfo").text();
 		//console.log(coords);
 		var splits = coords.split(", ");
