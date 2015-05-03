@@ -73,6 +73,8 @@ position: relative;
 
     
 #artistname {
+    font-family: 'Roboto', sans-serif;
+    font-style: 700;
     text-align: center;
     color: white;
     position: relative;
