@@ -38,7 +38,7 @@
                         {
                             id: 'sky',
                             type: 'image',
-                            rect: ['41px', '300px', '113px', '30px', 'auto', 'auto'],
+                            rect: ['238px', '408px', '113px', '30px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"sky.png",'0px','0px']
                         },
                         {
@@ -58,14 +58,14 @@
                         {
                             id: 'sky32',
                             type: 'image',
-                            rect: ['-137px', '127px', '100px', '37px', 'auto', 'auto'],
-                            opacity: '0',
+                            rect: ['-137px', '404px', '100px', '37px', 'auto', 'auto'],
+                            opacity: '1',
                             fill: ["rgba(0,0,0,0)",im+"sky3.png",'0px','0px']
                         },
                         {
                             id: 'sky4',
                             type: 'image',
-                            rect: ['401px', '66px', '73px', '30px', 'auto', 'auto'],
+                            rect: ['297px', '453px', '73px', '30px', 'auto', 'auto'],
                             opacity: '0',
                             fill: ["rgba(0,0,0,0)",im+"sky4.png",'0px','0px']
                         },
@@ -81,12 +81,27 @@
                             preload: 'auto'
                         },
                         {
-                            id: 'horbartbergen',
+                            id: 'horbartbergen22',
                             type: 'image',
-                            rect: ['64px', '229px', '272px', '91px', 'auto', 'auto'],
-                            overflow: 'hidden',
-                            opacity: '1',
-                            fill: ["rgba(0,0,0,0)",im+"horbartbergen.png",'0px','0px']
+                            rect: ['47px', '259px', '312px', '85px', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"horbartbergen2.png",'0px','0px']
+                        },
+                        {
+                            id: 'headphone',
+                            type: 'image',
+                            rect: ['256px', '130px', '129px', '162px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"headphone.png",'0px','0px']
+                        },
+                        {
+                            id: 'headphone3',
+                            type: 'image',
+                            rect: ['3px', '-241px', '200px', '251px', 'auto', 'auto'],
+                            autoOrient: false,
+                            overflow: 'visible',
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"headphone.png",'0px','0px'],
+                            transform: [[],['-29'],[],['0.5','0.5']]
                         }
                     ],
                     style: {
@@ -103,24 +118,44 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid91",
-                            "left",
+                            "eid108",
+                            "top",
                             2000,
-                            2983,
-                            "linear",
-                            "${sky32}",
-                            '-163px',
-                            '47px'
+                            2397,
+                            "easeInOutBounce",
+                            "${headphone}",
+                            '-226px',
+                            '128px'
                         ],
                         [
-                            "eid43",
+                            "eid107",
+                            "top",
+                            4397,
+                            230,
+                            "easeInOutBounce",
+                            "${headphone}",
+                            '128px',
+                            '130px'
+                        ],
+                        [
+                            "eid111",
+                            "top",
+                            4627,
+                            873,
+                            "easeInOutBounce",
+                            "${headphone}",
+                            '130px',
+                            '70px'
+                        ],
+                        [
+                            "eid102",
                             "left",
-                            4983,
-                            17,
+                            1115,
+                            2635,
                             "linear",
                             "${sky32}",
-                            '47px',
-                            '18px'
+                            '-137px',
+                            '27px'
                         ],
                         [
                             "eid53",
@@ -130,37 +165,17 @@
                             "linear",
                             "${sky4}",
                             '66px',
-                            '64px'
+                            '453px'
                         ],
                         [
-                            "eid92",
+                            "eid103",
                             "top",
-                            2000,
-                            1483,
+                            1115,
+                            2635,
                             "linear",
                             "${sky32}",
-                            '375px',
-                            '320px'
-                        ],
-                        [
-                            "eid45",
-                            "top",
-                            3483,
-                            17,
-                            "linear",
-                            "${sky32}",
-                            '320px',
-                            '313px'
-                        ],
-                        [
-                            "eid93",
-                            "top",
-                            3500,
-                            1483,
-                            "linear",
-                            "${sky32}",
-                            '313px',
-                            '377px'
+                            '404px',
+                            '371px'
                         ],
                         [
                             "eid51",
@@ -193,84 +208,14 @@
                             'rgba(102,68,97,1.00)'
                         ],
                         [
-                            "eid85",
-                            "left",
-                            2000,
-                            1183,
-                            "linear",
-                            "${sky2}",
-                            '464px',
-                            '411px'
-                        ],
-                        [
                             "eid86",
                             "left",
                             3183,
-                            818,
+                            1444,
                             "linear",
                             "${sky2}",
                             '411px',
-                            '197px'
-                        ],
-                        [
-                            "eid88",
-                            "opacity",
-                            2000,
-                            0,
-                            "linear",
-                            "${sky2}",
-                            '1',
-                            '1'
-                        ],
-                        [
-                            "eid73",
-                            "background-image",
-                            0,
-                            0,
-                            "linear",
-                            "${Rectangle}",
-                            [270,[['rgba(255,255,255,0)',0],['rgba(255,255,255,0)',100]]],
-                            [270,[['rgba(255,255,255,0)',0],['rgba(255,255,255,0)',100]]]
-                        ],
-                        [
-                            "eid72",
-                            "border-color",
-                            0,
-                            0,
-                            "linear",
-                            "${Rectangle}",
-                            'rgb(0, 0, 0)',
-                            'rgb(0, 0, 0)'
-                        ],
-                        [
-                            "eid12",
-                            "top",
-                            2000,
-                            2500,
-                            "linear",
-                            "${sky}",
-                            '300px',
-                            '108px'
-                        ],
-                        [
-                            "eid87",
-                            "top",
-                            3183,
-                            818,
-                            "linear",
-                            "${sky2}",
-                            '224px',
-                            '171px'
-                        ],
-                        [
-                            "eid42",
-                            "opacity",
-                            2500,
-                            1141,
-                            "linear",
-                            "${sky32}",
-                            '0',
-                            '1'
+                            '-22px'
                         ],
                         [
                             "eid59",
@@ -283,24 +228,74 @@
                             '1'
                         ],
                         [
-                            "eid52",
-                            "left",
-                            1737,
-                            3246,
+                            "eid88",
+                            "opacity",
+                            2000,
+                            0,
                             "linear",
-                            "${sky4}",
-                            '401px',
-                            '269px'
+                            "${sky2}",
+                            '1',
+                            '1'
                         ],
                         [
-                            "eid63",
+                            "eid128",
+                            "opacity",
+                            2307,
+                            876,
+                            "easeInOutBounce",
+                            "${headphone3}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid127",
                             "top",
+                            2307,
+                            1943,
+                            "easeInOutBounce",
+                            "${headphone3}",
+                            '-241px',
+                            '-46px'
+                        ],
+                        [
+                            "eid131",
+                            "top",
+                            4250,
+                            733,
+                            "easeInOutBounce",
+                            "${headphone3}",
+                            '-46px',
+                            '65px'
+                        ],
+                        [
+                            "eid12",
+                            "top",
+                            2000,
+                            2983,
+                            "linear",
+                            "${sky}",
+                            '300px',
+                            '408px'
+                        ],
+                        [
+                            "eid87",
+                            "top",
+                            3183,
+                            1444,
+                            "linear",
+                            "${sky2}",
+                            '224px',
+                            '448px'
+                        ],
+                        [
+                            "eid73",
+                            "background-image",
                             0,
                             0,
                             "linear",
                             "${Rectangle}",
-                            '0px',
-                            '0px'
+                            [270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]],
+                            [270,[['rgba(255,255,255,0.00)',0],['rgba(255,255,255,0.00)',100]]]
                         ],
                         [
                             "eid66",
@@ -313,6 +308,66 @@
                             '401px'
                         ],
                         [
+                            "eid110",
+                            "left",
+                            4627,
+                            0,
+                            "linear",
+                            "${headphone}",
+                            '256px',
+                            '256px'
+                        ],
+                        [
+                            "eid104",
+                            "opacity",
+                            1115,
+                            0,
+                            "linear",
+                            "${sky32}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid10",
+                            "left",
+                            2000,
+                            2627,
+                            "easeInOutQuint",
+                            "${sky}",
+                            '-137px',
+                            '238px'
+                        ],
+                        [
+                            "eid72",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle}",
+                            'rgb(0, 0, 0)',
+                            'rgb(0, 0, 0)'
+                        ],
+                        [
+                            "eid95",
+                            "opacity",
+                            0,
+                            4983,
+                            "linear",
+                            "${horbartbergen22}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid63",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${Rectangle}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
                             "eid62",
                             "height",
                             0,
@@ -323,14 +378,24 @@
                             '640px'
                         ],
                         [
-                            "eid10",
+                            "eid126",
                             "left",
-                            2000,
-                            2500,
+                            2307,
+                            2676,
+                            "easeInOutBounce",
+                            "${headphone3}",
+                            '3px',
+                            '27px'
+                        ],
+                        [
+                            "eid52",
+                            "left",
+                            1737,
+                            3246,
                             "linear",
-                            "${sky}",
-                            '-137px',
-                            '41px'
+                            "${sky4}",
+                            '401px',
+                            '297px'
                         ]
                     ]
                 }
