@@ -1,0 +1,144 @@
+body {
+    background-color: black;
+}
+
+a {
+    color: white;
+    text-decoration:none;  
+} 
+
+p {
+    color: white;
+    
+} 
+
+
+
+#nav {
+    color: yellow;
+    text-align: center;
+    font-variant:small-caps;
+    position: relative;
+    top: 80px;
+
+}
+
+h1 {
+    font-size: 360%;
+}
+h2 {
+   color: white;
+    font-size: 250%;
+   text-align: center;
+    position: relative;
+    top: 50px;
+
+
+    
+}
+
+
+
+#frem {
+position: fixed;
+top: 400px;
+right: 20px;
+}
+
+#rullegardin {
+    position: fixed;
+top: 140px;
+left: 150px;
+}
+
+ #play {
+position: relative;
+    text-align: center;
+         top: 130px;
+     }
+
+#meir {
+    position: fixed;
+    left: 100px;
+    top: 350px;
+    
+}
+
+
+#albumphoto {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+    
+#artistname {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 130px;
+}
+
+#artistinfo {
+    color: white;
+    position: relative;
+    top: 160px;
+    text-align: center;
+    
+}
+
+#bio {
+    color: white;
+    position: relative;
+    top: 150px;
+    
+}
+
+#konsertliste {
+    color: red;
+}
+
+#periodetekst {
+    position: fixed;
+top: 200px;
+}
+
+
+
+
+
+/*
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px; 
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px; 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+
+
+
+#nav {
+    border:1px solid grey;
+    padding:10px;
+    margin:30px;
+    text-align: center;
