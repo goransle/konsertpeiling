@@ -2,6 +2,8 @@ $(document).ready(function(){
 	//Starter geoposisjonering
 	watchFunc();
 	var playedSongs = [""];
+	var artister = [""];
+	var lokaler = [""];
 	//
 	$("#hi").click(function () {
 		clear();
@@ -17,11 +19,14 @@ $(document).ready(function(){
 		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
 		$("#resultat").append(a.toFixed(2) + " km");
 		finnLokaler(coords, 3);
-		finnKonserter("Kvarteret");
-		finnSanger("Gatas Parliament");
-		playSongs("Egil Olsen");
+		//finnKonserter("Det Akademiske Kvarter");
+		//finnSanger("Gatas Parliament");
+		playSongs();
+		console.log($("#konserter").html());
 		console.log(playedSongs);
-		
+		console.log(artister);
+		console.log(lokaler);
+
 	});
 
 	//bruker jplayer http://jplayer.org/latest/demo-02-jPlayerPlaylist/
@@ -122,20 +127,27 @@ $(document).ready(function(){
 		var splits = posisjon.split(", ");
 		var lat = splits[0];
 		var long = splits[1];
-		var lokaler = [];
 		//Henter greier ut frå JSON filer
 		$.getJSON( "../JSON/lokaler.json", function( json ) {
 			$.each(json.konserter.lokaler, function( key, value ) {
 				var x = getDistanceFromLatLonInKm(lat,long,value.lat,value.long);
 				if(x < distanse){
-					//lokaler[0] = "hø";
-					//får gjort dette, men ikkje lagt til i array? :S
 					$("#lokaler").append(value.location + " " + x.toFixed(2) + " km" + "<br />");
+					if ($.inArray(value.location, lokaler) == -1){
+						lokaler.push(value.location);
+
+					}
 				}
-				else{};
+				else{
+					if($.inArray(value.location, lokaler) == 1){
+						lokaler.pop(value.location);
+					}
+				}
 
 			});
-			//return lokaler[0];
+		});
+		$.each(lokaler, function(key, value ){
+			finnKonserter(lokaler[key]);
 		});
 	}
 	//Finner konserter for et gitt lokale, få inn dato?
@@ -143,7 +155,9 @@ $(document).ready(function(){
 		$.getJSON( "../JSON/lokaler.json", function( json ){
 			$.each(json.konserter.konserter, function( key, value ){
 				if(value.lokale == lokale){
-					$("#konserter").append(value.artist + " spiller på " + value.lokale + " den " + value.dato + "<br />");
+					if($.inArray(value.artist, artister) == -1){
+						artister.push(value.artist);
+					}
 				}
 			}); 
 		});
@@ -163,12 +177,12 @@ $(document).ready(function(){
 		});
 	}
 
-// Legger til sangene til en artist (får finne nærmeste artist i ein annen funksjon) i en spilleliste
-	function playSongs(artist){
+	// Legger til sangene til en artist (får finne nærmeste artist i ein annen funksjon) i en spilleliste
+	function playSongs(){
 		$.getJSON( "../JSON/lokaler.json", function( json ){
 			$.each(json.konserter.artister, function( key, value){
 				$.each(value.sanger, function(x, y){
-					if(y.filplassering !== '' && value.navn == artist && $.inArray(y.navn, playedSongs) === -1){
+					if(y.filplassering !== '' && $.inArray(value.navn, artister) == 1  && $.inArray(y.navn, playedSongs) === -1){
 						//$("#spiller").attr('src', y.filplassering);
 						spilleliste.add({
 							title: y.navn,
