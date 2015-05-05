@@ -1,0 +1,34 @@
+body{
+	font-family: sans-serif;
+}
+button{
+	background-color: transparent;
+	border: none;
+	height: 75px;
+	width: 75px;
+	background-repeat: no-repeat;
+}
+.jp-previous{
+	background-image: url("/ikon/forrigesang.png");
+}
+.jp-play{
+	background-image: url("/ikon/spill.png");
+	height: 150px;
+	width: 150px;
+}
+.jp-stop{
+	background-image: url("/ikon/pause.png");
+}
+.jp-next{
+	background-image: url("/ikon/nestesang.png");
+}
+.jp-mute{
+	background-image: url("/ikon/mute.png");
+	height: 55px;
+	width: 50px;
+}
+.jp-volume-max{
+	background-image: url("/ikon/volum.png");
+	height: 37px;
+	width: 50px;
+}

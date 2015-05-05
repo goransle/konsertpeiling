@@ -37,7 +37,8 @@
 		"artister": [
 			{
 				"navn": "Bergen Filharmoniske Orkester",
-				"sjanger": "",
+				"bilde": "",
+				"sjanger": "Klassisk",
 				"sanger": [
 					{
 						"navn": "Bojarenes Inntogsmarsj",
