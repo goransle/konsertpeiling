@@ -4,6 +4,17 @@ $(document).ready(function(){
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
+	clear();
+	$(".jp-stop").hide();
+	$(".jp-play").click(function() {
+		$(".jp-play").hide();
+		$(".jp-stop").show();
+	});
+	
+	$(".jp-stop").click(function() {
+		$(".jp-stop").hide();
+		$(".jp-play").show();
+	});
 	//
 	$("#hi").click(function () {
 		clear();
@@ -200,5 +211,7 @@ $(document).ready(function(){
 		$("#lokaler").empty();
 		$("#artister").empty();
 		$("#konserter").empty();
+		$(".hidden").hide();
+
 	}
 });
