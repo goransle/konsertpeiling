@@ -4,13 +4,17 @@ $(document).ready(function(){
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
+	var currentTrack = $("#jp_container_1 .currentTitle").text();
+	var currentArtist = $("#jp_container_1 .currentArtist").text();
+	$(".jp-playlist-item-remove").hide();
 	clear();
 	$(".jp-stop").hide();
+
 	$(".jp-play").click(function() {
 		$(".jp-play").hide();
 		$(".jp-stop").show();
 	});
-	
+
 	$(".jp-stop").click(function() {
 		$(".jp-stop").hide();
 		$(".jp-play").show();
@@ -53,13 +57,20 @@ $(document).ready(function(){
 		}
 	], {
 		playlistOptions: {
-			enableRemoveControls: true
+			enableRemoveControls: false
 		},
 		supplied: "mp3, m4a",
 		smoothPlayBar: true,
 		keyEnabled: true,
 		autoPlay: true,
-		audioFullscreen: false
+		audioFullscreen: false,
+		optionsAudio: {
+			size: {
+				width:"360px",
+				height:"400px",
+				cssClass:""
+			}
+		}
 	});
 
 
@@ -201,6 +212,7 @@ $(document).ready(function(){
 							mp3: y.filplassering
 						});
 						playedSongs[playedSongs.length+1]=y.navn;
+						console.log(currentTrack);
 					}
 				});
 			});
