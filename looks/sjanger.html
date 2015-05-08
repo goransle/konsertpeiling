@@ -3,13 +3,15 @@
 					<link rel="stylesheet" href="css/styles.css">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
           <script type="text/javascript" src="js/main.js"></script>
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
  
               </head>
 				<body>
-					<h2>Velg Sjanger:</h2>
+					<h2>Sjanger</h2>
+					<h3>Velg de du vil høre minst av:</h3>
                     
 
-                    
+<!--                  
 <select id="rullegardin" name="rullegardin">
 			<option value="1">Rock</option>
 			<option value="2">Pop</option>
@@ -20,14 +22,20 @@
 			<option value="7">Electro</option>
 			<option value="8">Country</option>
 			<option value="9">Dance</option>
-		</select>   
+		</select>   /*  -->
                
                     
-                    
-                    
-                    
-                    
-                
+<div class="multiselect">
+    <label><input type="checkbox" name="option[Rock]" value="1" />Rock</label>
+    <label><input type="checkbox" name="option[]" value="2" />Pop</label>
+    <label><input type="checkbox" name="option[]" value="3" />Rap</label>
+    <label><input type="checkbox" name="option[]" value="4" />Alternative</label>
+    <label><input type="checkbox" name="option[]" value="5" />Indie</label>
+    <label><input type="checkbox" name="option[]" value="6" />Klassisk</label>
+    <label><input type="checkbox" name="option[]" value="7" />Electro</label>
+    <label><input type="checkbox" name="option[]" value="8" />Country</label>
+    <label><input type="checkbox" name="option[]" value="9" />Dance</label>
+</div>                        
                 
 <div id="frem">
 <a href="utforsk.html">
@@ -35,6 +43,5 @@
 </a>
 </div>
                 
-            </body>    
-                
-			</html>
+</body>    
+</html>

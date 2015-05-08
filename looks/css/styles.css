@@ -8,11 +8,8 @@ a {
 } 
 
 p {
-    color: white;
-    
+    color: white; 
 } 
-
-
 
 #nav {
     color: yellow;
@@ -20,58 +17,77 @@ p {
     font-variant:small-caps;
     position: relative;
     top: 80px;
-
 }
 
 h1 {
     font-size: 360%;
 }
+
 h2 {
-   color: white;
+    color: white;
     font-size: 250%;
-   text-align: center;
+    text-align: center;
     position: relative;
-    top: 50px;
-
-
-    
+    top: 50px;  
 }
 
-
+h3  {
+    color: white;
+    font-size: 90%;
+    text-align: center;
+    margin: 55px;
+}
 
 #frem {
-position: fixed;
-top: 400px;
-right: 20px;
+    position: fixed;
+    top: 400px;
+    right: 20px;
 }
 
+/*
 #rullegardin {
     position: fixed;
 top: 140px;
 left: 150px;
+} */
+
+.multiselect {
+    left: 100px;
+    margin-top: -30px;
+    overflow:auto;
+    font-size: 14pt;
+    color: #FFF;
+    line-height: 18pt;
+    margin-left: 90px;
+}
+ 
+.multiselect label {
+    display:block;
+}
+ 
+.multiselect-on {
+    color:#FFF;
+    background-color:#000;
 }
 
- #play {
-position: relative;
+#play {
+    position: relative;
     text-align: center;
-         top: 130px;
-     }
+    top: 130px;
+}
 
 #meir {
     position: fixed;
     left: 100px;
-    top: 350px;
-    
+    top: 350px; 
 }
-
 
 #albumphoto {
     position: absolute;
     top: 0px;
     left: 0px;
 }
-
-    
+ 
 #artistname {
     font-family: 'Roboto', sans-serif;
     font-style: 700;
@@ -86,14 +102,12 @@ position: relative;
     position: relative;
     top: 160px;
     text-align: center;
-    
 }
 
 #bio {
     color: white;
     position: relative;
-    top: 150px;
-    
+    top: 150px; 
 }
 
 #konsertliste {
@@ -105,10 +119,6 @@ position: relative;
 top: 200px;
 }
 
-
-
-
-
 /*
 #header {
     background-color:black;
@@ -116,6 +126,7 @@ top: 200px;
     text-align:center;
     padding:5px;
 }
+
 #nav {
     line-height:30px;
     background-color:#eeeeee;
@@ -124,11 +135,13 @@ top: 200px;
     float:left;
     padding:5px; 
 }
+
 #section {
     width:350px;
     float:left;
     padding:10px; 
 }
+
 #footer {
     background-color:black;
     color:white;
@@ -136,8 +149,6 @@ top: 200px;
     text-align:center;
     padding:5px; 
 }
-
-
 
 #nav {
     border:1px solid grey;
