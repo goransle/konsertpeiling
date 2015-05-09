@@ -18,6 +18,48 @@
 				"lat"  : "60.389427", 
 				"long" : "5.323747",
 				"location" : "Garage"
+			},
+			{
+				"id": 4,
+				"lat"  : "60.389091", 
+				"long" : "5.328554",
+				"location" : "Lysverket"
+			},
+			{
+				"id": 5,
+				"lat"  : "60.396314", 
+				"long" : "5.322313",
+				"location" : "Madam Felle"
+			},
+			{
+				"id": 6,
+				"lat"  : "60.397887", 
+				"long" : "5.307849",
+				"location" : "USF Verftet"
+			},
+			{
+				"id": 7,
+				"lat"  : "60.389686", 
+				"long" : "5.326494",
+				"location" : "Landmark"
+			},
+			{
+				"id": 8,
+				"lat"  : "60.377197", 
+				"long" : "5.338595",
+				"location" : "Forum Scene"
+			},
+			{
+				"id": 9,
+				"lat"  : "60.392274", 
+				"long" : "5.322530",
+				"location" : "Ole Bull"
+			},
+			{
+				"id": 10,
+				"lat"  : "60.399978", 
+				"long" : "5.318503",
+				"location" : "Koengen"
 			}
 		],
 		"konserter": [
