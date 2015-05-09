@@ -19,6 +19,9 @@ $(document).ready(function(){
 		$(".jp-stop").hide();
 		$(".jp-play").show();
 	});
+	$(".jp-next").click(function() {
+		playSongs();
+	});
 	//
 	$("#hi").click(function () {
 		clear();
@@ -33,7 +36,7 @@ $(document).ready(function(){
 
 		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
 		$("#resultat").append(a.toFixed(2) + " km");
-		finnLokaler(coords, 3);
+		finnLokaler(coords, 10);
 		//finnKonserter("Det Akademiske Kvarter");
 		//finnSanger("Gatas Parliament");
 		playSongs();
@@ -214,6 +217,10 @@ $(document).ready(function(){
 						playedSongs[playedSongs.length+1]=y.navn;
 						console.log(currentTrack);
 					}
+					
+				});
+				artister = $.grep(artister, function(x){
+					return x != value.navn;
 				});
 			});
 		});
