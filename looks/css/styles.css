@@ -10,7 +10,9 @@ a {
 } 
 
 p {
-    color: #b7a4ce; 
+    color: white;
+    font-weight: 300;
+    font-size: 110%;
 } 
 
 #nav {
@@ -31,33 +33,40 @@ h1 {
 
 h2 {
     color: #b7a4ce;
-    font-size: 150%;
+    font-size: 190%;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     position: relative;
-    top: 15px;  
+    top: 18px; 
+    margin-top: -15px; 
 }
 
 h3  {
     font-weight: 400;
     font-style: italic;
     color: #12808D;
-    font-size: 110%;
+    font-size: 130%;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.konserter  {
+    font-weight: 400;
+    font-style: italic;
+    color: #12808D;
+    font-size: 130%;
     text-align: left;
-    margin: 10px;
-    padding-top: 5px;
+    margin: 2px;
 }
 
 h4  {
     color: white;
-    padding-left: 5px;
-    margin-top: -20px;
-    padding:0;
-    border:0;
+    line-height: 23px;
     font-size: 120%;
     font-weight: 500;
-    display: block;
+    margin: 0px;
+    float: left;
 }
 
 .tableimg  {
@@ -83,11 +92,19 @@ h4  {
 }
 
 #rullegardin {
+    color: rgb(107, 54, 157);
+    font-family: 'Roboto';
+    font-size: 170%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 30px;
+    font-style: 400;
     position: fixed;
     top: 100px;
-    left: 100px;
-    width: 150px;
-    height: 200px;
+    left: 30px;
+    width: 300px;
+    height: 220px;
+    text-align: center;
 }
 /*
 #rullegardin .select  {
@@ -99,10 +116,10 @@ font-size: 30px;
     left: 100px;
     margin-top: 20px;
     overflow:auto;
-    font-size: 16pt;
+    font-size: 120%;
     color: #FFF;
     line-height: 23pt;
-    margin-left: 90px;
+    margin-left: 120px;
 }
  
 .multiselect label {
@@ -117,13 +134,38 @@ font-size: 30px;
 #play {
     position: relative;
     text-align: center;
-    top: 130px;
+    top: 170px;
+    width: 340px;
+}
+
+#play .playknapp {
+    width: 110px;
+}
+
+#play .fsang  {
+    float: left;
+    padding-top: 20px;
+}
+
+#play .nsang  {
+    float: right;
+    padding-top: 20px;
 }
 
 #meir {
     position: fixed;
-    left: 100px;
-    top: 350px; 
+    left: 40px;
+    top: 400px; 
+}
+
+#meir .infoknapp  {
+    width: 60px;
+    padding-left: 35px;
+}
+
+#meir .likerknapp  {
+    width: 60px;
+    padding-left: 80px;
 }
 
 #albumphoto {
@@ -133,12 +175,11 @@ font-size: 30px;
 }
  
 #artistname {
-    font-family: 'Roboto', sans-serif;
     font-style: 700;
     text-align: center;
     color: white;
     position: relative;
-    top: 130px;
+    top: 175px;
 }
 
 #artistinfo {
@@ -161,6 +202,7 @@ font-size: 30px;
 #periodetekst {
     position: fixed;
     top: 320px;
+    color: white;
 }
 
 /*
