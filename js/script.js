@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	//Starter geoposisjonering
 	watchFunc();
+	var coords = $("#locationInfo").text();
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
@@ -21,12 +22,16 @@ $(document).ready(function(){
 	});
 	$(".jp-next").click(function() {
 		playSongs();
+		$(".jp-play").hide();
+		$(".jp-stop").show();
 	});
 	//
 	$("#hi").click(function () {
 		clear();
-		var coords = $("#locationInfo").text();
-		//console.log(coords);
+		//debug koordninater
+		coords = "60.388685, 5.326101";
+		//coords = $("#locationInfo").text();
+		console.log(coords);
 		var splits = coords.split(", ");
 		var lat = splits[0];
 		var long = splits[1];
@@ -40,6 +45,8 @@ $(document).ready(function(){
 		//finnKonserter("Det Akademiske Kvarter");
 		//finnSanger("Gatas Parliament");
 		playSongs();
+		//denne gjer noe som ting til å fungere, baklengs
+		artister.shift();
 		console.log($("#konserter").html());
 		console.log(playedSongs);
 		console.log(artister);
@@ -217,10 +224,6 @@ $(document).ready(function(){
 						playedSongs[playedSongs.length+1]=y.navn;
 						console.log(currentTrack);
 					}
-					
-				});
-				artister = $.grep(artister, function(x){
-					return x != value.navn;
 				});
 			});
 		});

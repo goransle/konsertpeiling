@@ -65,12 +65,30 @@
 		"konserter": [
 			{
 				"dato": "24-04-2015",
+				"klokka": "20:00",
+				"pris": "320",
 				"artist": "Egil Olsen",
 				"lokale": "Det Akademiske Kvarter"
 			},
 			{
 				"dato": "25-04-2015",
+				"klokka": "20:00",
+				"pris": "320",
 				"artist": "Herman's Hermits",
+				"lokale": "Madam Felle"
+			},
+			{
+				"dato": "21-04-2015",
+				"klokka": "20:00",
+				"pris": "320",
+				"artist": "Ebbot Lundberg",
+				"lokale": "Ole Bull"
+			},
+			{
+				"dato": "25-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "TOBB",
 				"lokale": "Madam Felle"
 			}
 		],
@@ -102,7 +120,7 @@
 				"sanger": [
 					{
 						"navn": "Dansa På Min Grav",
-						"filplassering": "/media/Ebbot Lundberg - Dansa på min grav.mp3"
+						"filplassering": "/media/Ebbot Lundberg - Dansa pa min grav.mp3"
 					}
 				]
 			},
