@@ -1,41 +1,79 @@
 body {
     background-color: black;
+    font-family: 'Roboto';
+    font-style: normal;
 }
 
 a {
-    color: white;
+    color: #b7a4ce;
     text-decoration:none;  
 } 
 
 p {
-    color: white; 
+    color: #b7a4ce; 
 } 
 
 #nav {
-    color: yellow;
+    color: #b7a4ce;
     text-align: center;
-    font-variant:small-caps;
     position: relative;
-    top: 80px;
+    top: 70px;
+    line-height: 60px;
 }
 
 h1 {
-    font-size: 360%;
+    font-size: 280%;
+    text-transform: uppercase;
+    color:  #b7a4ce;
+    position: relative;
+    font-weight: 700;
 }
 
 h2 {
-    color: white;
-    font-size: 250%;
+    color: #b7a4ce;
+    font-size: 150%;
+    font-weight: 700;
+    text-transform: uppercase;
     text-align: center;
     position: relative;
-    top: 30px;  
+    top: 15px;  
 }
 
 h3  {
+    font-weight: 400;
+    font-style: italic;
+    color: #12808D;
+    font-size: 110%;
+    text-align: left;
+    margin: 10px;
+    padding-top: 5px;
+}
+
+h4  {
     color: white;
-    font-size: 90%;
-    text-align: center;
-    margin: 55px;
+    padding-left: 5px;
+    margin-top: -20px;
+    padding:0;
+    border:0;
+    font-size: 120%;
+    font-weight: 500;
+    display: block;
+}
+
+.tableimg  {
+    padding-top: 5px;
+    width: 144px;
+    height: 110px;
+    float: left;
+}
+
+.consertline  {
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 400;
+    color: white;
+    margin: 3px 0px 0px;
+    opacity: 0.9;
 }
 
 #frem {
@@ -59,11 +97,11 @@ font-size: 30px;
 
 .multiselect {
     left: 100px;
-    margin-top: -30px;
+    margin-top: 20px;
     overflow:auto;
-    font-size: 14pt;
+    font-size: 16pt;
     color: #FFF;
-    line-height: 18pt;
+    line-height: 23pt;
     margin-left: 90px;
 }
  
