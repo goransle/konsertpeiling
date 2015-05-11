@@ -92,13 +92,13 @@ h4  {
 }
 
 #rullegardin {
-    color: rgb(107, 54, 157);
+    color: #491c4a;
     font-family: 'Roboto';
     font-size: 170%;
     padding-top: 5px;
     padding-bottom: 5px;
     line-height: 30px;
-    font-style: 400;
+    font-weight: 700;
     position: fixed;
     top: 100px;
     left: 30px;
