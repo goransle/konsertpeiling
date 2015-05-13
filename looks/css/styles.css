@@ -71,6 +71,9 @@ h4  {
     font-weight: 500;
     margin: 0px;
 }
+td{
+	width: 150px;
+}
 
 .tableimg  {
     padding-top: 5px;
