@@ -5,8 +5,10 @@ $(document).ready(function(){
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
-	var currentTrack = $("#jp_container_1 .currentTitle").text();
-	var currentArtist = $("#jp_container_1 .currentArtist").text();
+	var currentTrack = $("Intro - The Taxpayers").text();
+	var split = currentTrack.split(" - ");
+	var currentArtist = split[2];
+	rekalkuler();
 	$(".jp-playlist-item-remove").hide();
 	clear();
 	$(".jp-stop").hide();
@@ -14,43 +16,28 @@ $(document).ready(function(){
 	$(".jp-play").click(function() {
 		$(".jp-play").hide();
 		$(".jp-stop").show();
+		rekalkuler();
 	});
-
+	$("#jp_container_1").bind($.jPlayer.event.play, function(event) {
+		updatePoster();
+	});	
 	$(".jp-stop").click(function() {
 		$(".jp-stop").hide();
 		$(".jp-play").show();
 	});
 	$(".jp-next").click(function() {
-		playSongs();
+		rekalkuler();
 		$(".jp-play").hide();
 		$(".jp-stop").show();
 	});
 	//
 	$("#hi").click(function () {
-		clear();
-		//debug koordninater
-		coords = "60.388685, 5.326101";
-		//coords = $("#locationInfo").text();
-		console.log(coords);
-		var splits = coords.split(", ");
-		var lat = splits[0];
-		var long = splits[1];
-
-		var kvarteretlat = 60.389923;
-		var kvarteretlong = 5.321825;
-
-		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
-		$("#resultat").append(a.toFixed(2) + " km");
-		finnLokaler(coords, 10);
-		//finnKonserter("Det Akademiske Kvarter");
-		//finnSanger("Gatas Parliament");
-		playSongs();
-		//denne gjer noe som ting til å fungere, baklengs
-		artister.shift();
+		rekalkuler();
 		console.log($("#konserter").html());
 		console.log(playedSongs);
 		console.log(artister);
 		console.log(lokaler);
+		console.log(currentArtist);
 
 	});
 
@@ -235,5 +222,34 @@ $(document).ready(function(){
 		$("#konserter").empty();
 		$(".hidden").hide();
 
+	}
+	function updatePoster(){
+		currentTrack = $(".jp-playlist-current").text();
+		split = currentTrack.split(" - ");
+		console.log(split[2]);
+		currentArtist = split[2];
+		$("#poster").attr("src", "/bilde/" + currentArtist + ".jpg");
+	}
+	function rekalkuler(){
+		clear();
+		//debug koordninater
+		coords = "60.388685, 5.326101";
+		//coords = $("#locationInfo").text();
+		console.log(coords);
+		var splits = coords.split(", ");
+		var lat = splits[0];
+		var long = splits[1];
+
+		var kvarteretlat = 60.389923;
+		var kvarteretlong = 5.321825;
+
+		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
+		$("#resultat").append(a.toFixed(2) + " km");
+		finnLokaler(coords, 10);
+		//finnKonserter("Det Akademiske Kvarter");
+		//finnSanger("Gatas Parliament");
+		playSongs();
+		//denne gjer noe som ting til å fungere, baklengs
+		artister.shift();
 	}
 });
