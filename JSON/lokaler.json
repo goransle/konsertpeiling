@@ -60,6 +60,12 @@
 				"lat"  : "60.399978", 
 				"long" : "5.318503",
 				"location" : "Koengen"
+			},
+			{
+				"id": 11,
+				"lat"  : "60.316372", 
+				"long" : "5.357001",
+				"location" : "Fana kulturhus"
 			}
 		],
 		"konserter": [
@@ -90,6 +96,69 @@
 				"pris": "320",
 				"artist": "TOBB",
 				"lokale": "Madam Felle"
+			},
+			{
+				"dato": "20-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Vestlandsfanden",
+				"lokale": "Garage"
+			},
+			{
+				"dato": "22-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Love Antell",
+				"lokale": "Garage"
+			},
+			{
+				"dato": "23-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Katzenjammer",
+				"lokale": "USF Verftet"
+			},
+			{
+				"dato": "24-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Admiral P",
+				"lokale": "USF Verftet"
+			},
+			{
+				"dato": "24-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Jaa9 og OnklP",
+				"lokale": "USF Verftet"
+			},
+			{
+				"dato": "25-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Eva + the Heartmaker",
+				"lokale": "USF Verftet"
+			},
+			{
+				"dato": "25-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Vamp",
+				"lokale": "Fana kulturhus"
+			},
+			{
+				"dato": "26-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Cody Simpson",
+				"lokale": "USF Verftet"
+			},
+			{
+				"dato": "25-04-2015",
+				"klokka": "22:30",
+				"pris": "320",
+				"artist": "Triggerfinger",
+				"lokale": "Garage"
 			}
 		],
 		"artister": [
@@ -139,7 +208,7 @@
 				]
 			},
 			{
-				"navn": "Eva & The Heartmaker",
+				"navn": "Eva + the Heartmaker",
 				"sjanger": "",
 				"sanger": [
 					{
@@ -163,7 +232,7 @@
 				]
 			},
 			{
-				"navn": "Jaa9 & OnklP",
+				"navn": "Jaa9 og OnklP",
 				"sjanger": "",
 				"sanger": [
 					{
@@ -177,7 +246,7 @@
 				"sjanger": "",
 				"sanger": [
 					{
-						"navn": "Rock - Paper - Scissorsi",
+						"navn": "Rock, Paper, Scissors",
 						"filplassering": "/media/Katzenjammer - Rock - Paper - Scissors.mp3"
 					}
 				]

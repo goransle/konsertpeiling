@@ -60,6 +60,7 @@ $(document).ready(function(){
 		smoothPlayBar: true,
 		keyEnabled: true,
 		autoPlay: true,
+		loopOnPrevious: true,
 		audioFullscreen: false,
 		optionsAudio: {
 			size: {
