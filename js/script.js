@@ -20,6 +20,9 @@ $(document).ready(function(){
 	});
 	$("#jp_container_1").bind($.jPlayer.event.play, function(event) {
 		updatePoster();
+	});
+	$("#jp_container_1").bind($.jPlayer.event.ended, function(event) {
+		rekalkuler();
 	});	
 	$(".jp-stop").click(function() {
 		$(".jp-stop").hide();
@@ -27,6 +30,7 @@ $(document).ready(function(){
 	});
 	$(".jp-next").click(function() {
 		rekalkuler();
+		playSongs();
 		$(".jp-play").hide();
 		$(".jp-stop").show();
 	});
@@ -37,7 +41,7 @@ $(document).ready(function(){
 		console.log(playedSongs);
 		console.log(artister);
 		console.log(lokaler);
-		console.log(currentArtist);
+		//console.log(currentArtist);
 
 	});
 
@@ -202,14 +206,13 @@ $(document).ready(function(){
 		$.getJSON( "../JSON/lokaler.json", function( json ){
 			$.each(json.konserter.artister, function( key, value){
 				$.each(value.sanger, function(x, y){
-					if(y.filplassering !== '' && $.inArray(value.navn, artister) == 1  && $.inArray(y.navn, playedSongs) === -1){
-						//$("#spiller").attr('src', y.filplassering);
+					if(y.filplassering !== '' && $.inArray(value.navn, artister) == 1  && $.inArray(y.navn, playedSongs) == -1){
 						spilleliste.add({
 							title: y.navn,
 							artist: value.navn,
 							mp3: y.filplassering
 						});
-						playedSongs[playedSongs.length+1]=y.navn;
+						playedSongs.push(y.navn);
 						console.log(currentTrack);
 					}
 				});
