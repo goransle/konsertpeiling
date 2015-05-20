@@ -164,7 +164,6 @@
 		"artister": [
 			{
 				"navn": "Bergen Filharmoniske Orkester",
-				"bilde": "",
 				"sjanger": "Klassisk",
 				"sanger": [
 					{
@@ -175,8 +174,7 @@
 			},
 			{
 				"navn": "Admiral P",
-				"bilde": "",
-				"sjanger": "Pop, Reggea",
+				"sjanger": "Reggea, Hip-hop",
 				"sanger": [
 					{
 						"navn": "Kallenavn",
@@ -186,7 +184,7 @@
 			},
 			{
 				"navn": "Cody Simpson",
-				"sjanger": "",
+				"sjanger": "Pop",
 				"sanger": [
 					{
 						"navn": "La Da Dee",
@@ -196,7 +194,7 @@
 			},
 			{
 				"navn": "Ebbot Lundberg",
-				"sjanger": "",
+				"sjanger": "Rock",
 				"sanger": [
 					{
 						"navn": "Dansa På Min Grav",
@@ -206,7 +204,7 @@
 			},
 			{
 				"navn": "Egil Olsen",
-				"sjanger": "",
+				"sjanger": "Folk",
 				"sanger": [
 					{
 						"navn": "California",
@@ -220,7 +218,7 @@
 			},
 			{
 				"navn": "Eva + the Heartmaker",
-				"sjanger": "",
+				"sjanger": "Pop",
 				"sanger": [
 					{
 						"navn": "Gone In a Flash",
@@ -234,7 +232,7 @@
 			},
 			{
 				"navn": "Herman's Hermits",
-				"sjanger": "",
+				"sjanger": "Pop",
 				"sanger": [
 					{
 						"navn": "No Milk Today",
@@ -244,7 +242,7 @@
 			},
 			{
 				"navn": "Jaa9 og OnklP",
-				"sjanger": "",
+				"sjanger": "Hip-hop",
 				"sanger": [
 					{
 						"navn": "Glir Forbi",
@@ -254,7 +252,7 @@
 			},
 			{
 				"navn": "Katzenjammer",
-				"sjanger": "",
+				"sjanger": "Folk, Rock",
 				"sanger": [
 					{
 						"navn": "Rock, Paper, Scissors",
@@ -264,7 +262,7 @@
 			},
 			{
 				"navn": "Love Antell",
-				"sjanger": "",
+				"sjanger": "Pop",
 				"sanger": [
 					{
 						"navn": "Stjärna Där",
@@ -274,7 +272,7 @@
 			},
 			{
 				"navn": "TOBB",
-				"sjanger": "",
+				"sjanger": "Rock",
 				"sanger": [
 					{
 						"navn": "@ Borggården",
@@ -284,7 +282,7 @@
 			},
 			{
 				"navn": "Triggerfinger",
-				"sjanger": "",
+				"sjanger": "Rock",
 				"sanger": [
 					{
 						"navn": "I Follow Rivers",
@@ -294,7 +292,7 @@
 			},
 			{
 				"navn": "Vamp",
-				"sjanger": "",
+				"sjanger": "Folk",
 				"sanger": [
 					{
 						"navn": "Liten Fuggel",
@@ -308,7 +306,7 @@
 			},
 			{
 				"navn": "Vestlandsfanden",
-				"sjanger": "",
+				"sjanger": "Folk, Country",
 				"sanger": [
 					{
 						"navn": "Sitt Heilt i Ro",

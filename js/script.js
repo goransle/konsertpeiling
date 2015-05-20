@@ -5,6 +5,7 @@ $(document).ready(function(){
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
+	var sjangre =["Folk"];
 	var currentTrack = $("Intro - The Taxpayers").text();
 	var split = currentTrack.split(" - ");
 	var currentArtist = split[2];
@@ -178,13 +179,20 @@ $(document).ready(function(){
 	function finnKonserter(lokale){
 		$.getJSON( "../JSON/lokaler.json", function( json ){
 			$.each(json.konserter.konserter, function( key, value ){
-				if(value.lokale == lokale){
-					if($.inArray(value.artist, artister) == -1){
-						artister.push(value.artist);
+				$.each(json.konserter.artister, function( x, y ){
+					if(value.lokale == lokale){
+						if(value.artist = y.navn){
+							$.each(y.sjanger.split(", "), function( i, j ){
+								if($.inArray(value.artist, artister) == -1 && $.inArray(j, sjangre) !== -1){
+
+									artister.push(value.artist);
+								}
+							});
+						}
 					}
-				}
-			}); 
-		});
+				});
+			});
+		})
 	}
 	//finner sangene til ein gitt artist
 	// får finne ut kva denne faktisk skal gjere
