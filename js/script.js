@@ -1,13 +1,13 @@
-$(document).ready(function(){
+$(window).load(function(){
 	//Starter geoposisjonering
 	watchFunc();
 	var coords = $("#locationInfo").text();
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
-	var sjangre =["Folk", "Rock"];
-	var currentTrack = $("Intro - The Taxpayers").text();
-	var split = currentTrack.split(" - ");
+	var sjangre =["Folk", "Rock", "Hip-hop"];
+	var currentTrack = $("Intro-The Taxpayers").text();
+	var split = currentTrack.split("-");
 	var currentArtist = split[2];
 	rekalkuler();
 	$(".jp-playlist-item-remove").hide();
@@ -153,7 +153,7 @@ $(document).ready(function(){
 		var lat = splits[0];
 		var long = splits[1];
 		//Henter greier ut frå JSON filer
-		$.getJSON( "../JSON/lokaler.json", function( json ) {
+		$.getJSON( "JSON/lokaler.json", function( json ) {
 			$.each(json.konserter.lokaler, function( key, value ) {
 				var x = getDistanceFromLatLonInKm(lat,long,value.lat,value.long);
 				if(x < distanse){
@@ -177,7 +177,7 @@ $(document).ready(function(){
 	}
 	//Finner konserter for et gitt lokale, få inn dato?
 	function finnKonserter(lokale){
-		$.getJSON( "../JSON/lokaler.json", function( json ){
+		$.getJSON( "JSON/lokaler.json", function( json ){
 			$.each(json.konserter.konserter, function( key, value ){
 				$.each(json.konserter.artister, function( x, y ){
 					if(value.lokale == lokale){
@@ -197,7 +197,7 @@ $(document).ready(function(){
 	//finner sangene til ein gitt artist
 	// får finne ut kva denne faktisk skal gjere
 	function finnSanger(artist){
-		$.getJSON( "../JSON/lokaler.json", function( json ){
+		$.getJSON( "JSON/lokaler.json", function( json ){
 			$.each(json.konserter.artister, function( key, value){
 				if(value.navn === artist){
 					$("#artister").append("<strong>" +value.navn +"</strong>: <br />");
@@ -211,7 +211,7 @@ $(document).ready(function(){
 
 	// Legger til sangene til en artist (får finne nærmeste artist i ein annen funksjon) i en spilleliste
 	function playSongs(){
-		$.getJSON( "../JSON/lokaler.json", function( json ){
+		$.getJSON( "JSON/lokaler.json", function( json ){
 			$.each(json.konserter.artister, function( key, value){
 				$.each(value.sanger, function(x, y){
 					if(y.filplassering !== '' && $.inArray(value.navn, artister) == 1  && $.inArray(y.navn, playedSongs) == -1){
@@ -240,7 +240,9 @@ $(document).ready(function(){
 		split = currentTrack.split(" - ");
 		console.log(split[2]);
 		currentArtist = split[2];
-		$("#poster").attr("src", "/bilde/" + currentArtist + ".jpg");
+		trimmedArtist = currentArtist.replace(/\s/g, '');
+		console.log(trimmedArtist);
+		$("#poster").attr("src", "/bilde/" + trimmedArtist + ".jpg");
 	}
 	function rekalkuler(){
 		clear();

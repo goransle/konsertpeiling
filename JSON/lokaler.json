@@ -168,7 +168,7 @@
 				"sanger": [
 					{
 						"navn": "Bojarenes Inntogsmarsj",
-						"filplassering": "/media/Bergen Filharmoniske Orkester - Bojarenes Inntogsmars.mp3"
+						"filplassering": "/media/BojarenesInntogsmars.mp3"
 					}
 				]
 			},
@@ -178,7 +178,7 @@
 				"sanger": [
 					{
 						"navn": "Kallenavn",
-						"filplassering": "/media/Admiral P - Kallenavn.m4a"
+						"filplassering": "/media/Kallenavn.m4a"
 					}
 				]
 			},
@@ -188,7 +188,7 @@
 				"sanger": [
 					{
 						"navn": "La Da Dee",
-						"filplassering": "/media/Cody Simpson - La Da Dee.mp3"
+						"filplassering": "/media/LaDaDee.mp3"
 					}
 				]
 			},
@@ -198,7 +198,7 @@
 				"sanger": [
 					{
 						"navn": "Dansa På Min Grav",
-						"filplassering": "/media/Ebbot Lundberg - Dansa pa min grav.mp3"
+						"filplassering": "/media/Dansapamingrav.mp3"
 					}
 				]
 			},
@@ -208,11 +208,11 @@
 				"sanger": [
 					{
 						"navn": "California",
-						"filplassering": "/media/Egil Olsen - California.mp3"
+						"filplassering": "/media/California.mp3"
 					},
 					{
 						"navn": "Bombastic",
-						"filplassering": "/media/egil olsen -bombastic.m4a"
+						"filplassering": "/media/bombastic.m4a"
 					}
 				]
 			},
@@ -222,11 +222,11 @@
 				"sanger": [
 					{
 						"navn": "Gone In a Flash",
-						"filplassering": "/media/Eva & The Heartmaker - Gone In A Flash.mp3"
+						"filplassering": "/media/GoneInAFlash.mp3"
 					},
 					{
 						"navn": "Told You",
-						"filplassering": "/media/Eva & The Heartmaker - Told You.mp3"
+						"filplassering": "/media/Told You.mp3"
 					}
 				]
 			},
@@ -236,7 +236,7 @@
 				"sanger": [
 					{
 						"navn": "No Milk Today",
-						"filplassering": "/media/Herman's Hermits - No Milk Today.mp3"
+						"filplassering": "/media/NoMilkToday.mp3"
 					}
 				]
 			},
@@ -246,7 +246,7 @@
 				"sanger": [
 					{
 						"navn": "Glir Forbi",
-						"filplassering": "/media/Jaa9 & OnklP - Glir Forbi.mp3"
+						"filplassering": "/media/GlirForbi.mp3"
 					}
 				]
 			},
@@ -256,7 +256,7 @@
 				"sanger": [
 					{
 						"navn": "Rock, Paper, Scissors",
-						"filplassering": "/media/Katzenjammer - Rock Paper Scissors.mp3"
+						"filplassering": "/media/RockPaperScissors.mp3"
 					}
 				]
 			},
@@ -266,7 +266,7 @@
 				"sanger": [
 					{
 						"navn": "Stjärna Där",
-						"filplassering": "/media/Love Antell - Stjarna Dar.mp3"
+						"filplassering": "/media/StjarnaDar.mp3"
 					}
 				]
 			},
@@ -276,7 +276,7 @@
 				"sanger": [
 					{
 						"navn": "@ Borggården",
-						"filplassering": "/media/TOBB @ BORGGARDEN 2012.mp3"
+						"filplassering": "/media/2012.mp3"
 					}
 				]
 			},
@@ -286,7 +286,7 @@
 				"sanger": [
 					{
 						"navn": "I Follow Rivers",
-						"filplassering": "/media/Triggerfinger - I follow Rivers.mp3"
+						"filplassering": "/media/IfollowRivers.mp3"
 					}
 				]
 			},
@@ -296,11 +296,11 @@
 				"sanger": [
 					{
 						"navn": "Liten Fuggel",
-						"filplassering": "/media/Vamp - Liten Fuggel.mp3"
+						"filplassering": "/media/LitenFuggel.mp3"
 					},
 					{
 						"navn": "Tir N'a Noir",
-						"filplassering": "/media/Vamp - Tir N'a Noir.mp3"
+						"filplassering": "/media/TirNaNoir.mp3"
 					}
 				]
 			},
@@ -310,7 +310,7 @@
 				"sanger": [
 					{
 						"navn": "Sitt Heilt i Ro",
-						"filplassering": "/media/Vestlandsfanden - Sitt heilt i ro.mp3"
+						"filplassering": "/media/Sittheiltiro.mp3"
 					}
 				]
 			}	
