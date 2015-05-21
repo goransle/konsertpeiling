@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
-	var sjangre =["Folk"];
+	var sjangre =["Folk", "Rock"];
 	var currentTrack = $("Intro - The Taxpayers").text();
 	var split = currentTrack.split(" - ");
 	var currentArtist = split[2];
