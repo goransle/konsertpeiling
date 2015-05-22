@@ -50,6 +50,8 @@ button{
 }
 .jp-playlist-current{
 	display: block;
+	color: white;
+
 }
 .jp-playlist-item-remove{
 	display: none;
@@ -64,6 +66,8 @@ a{
 }
 .jp-duration, .jp-current-time{
 	display: inline;
+	color: white;
+
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
