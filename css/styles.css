@@ -229,12 +229,19 @@ font-size: 30px;
     text-align: center;
 }
 
-#spillavlyd {
-    position: fixed;
-    right: 10px;
-    top: 80px;
+#bioknapp {
+    position: relative;
+        text-align: left;
+    left: 40px;
+
 }
 
+#intervjuknapp
+position: relative;
+    text-align: center;
+         left: 130px;
+     }
+}
 
 
 /*
