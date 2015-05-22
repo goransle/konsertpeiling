@@ -1,66 +1,24 @@
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript" src="/js/jquery-2.1.3.min.js"></script>
-		<script type="text/javascript" src="/js/script.js"></script>
-		<script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
-		<script type="text/javascript" src="/js/jplayer.playlist.min.js"></script>
-	</head>
-	<body>
-		<h3 class="hidden">Du er så lang frå Kvarteret:</h3>
-		<p id="resultat" class="hidden">Evig langt!</p><a href="#" id="hi">Rekalkuler</a>
-		<h3 class="hidden">Din posisjon:</h3>
-		<p id="locationInfo" class="hidden"></p>
-		<h3 class="hidden">Konsertlokaler i nærleiken:</h3>
-		<p id="lokaler" class="hidden"></p>
-		<h3 class="hidden">Konserter i Bergen:</h3>
-		<p id="konserter" class="hidden"></p>
-		<h3 class="hidden">Artister i Bergen:</h3>
-		<p id="artister" class="hidden"></p>
-		<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
-			<div id="jquery_jplayer_1" class="jp-jplayer">
-			</div>
-			<div class="jp-type-playlist">
-				<div class="jp-gui" id="alt">
-				
-					<!--
-<div class="jp-video-play" style="display: none;">
-<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
-</div>
--->
-					<div class="jp-interface">
-					<div id="artistBilde"><img id="poster" src="media/medicines.jpg" alt=""></img></div>
-						<div class="jp-progress">
-							<div class="jp-seek-bar" style="width: 100%;">
-								<div class="jp-play-bar" style="width: 0%;"></div>
-							</div>
-						</div>
-						<div class="jp-details">
-							<div class="jp-title" aria-label="title">Cro Magnon Man</div>
-						</div>
-						<div class="jp-controls-holder">
-							<div class="jp-volume-controls hidden">
-								<button class="jp-mute" role="button" tabindex="0"></button>
-								<button class="jp-volume-max" role="button" tabindex="0"></button>
-								<div class="jp-volume-bar">
-									<div class="jp-volume-bar-value" style="width: 80%;"></div>
-								</div>
-							</div>
-							<div class="jp-controls">
-								<button class="jp-previous" role="button" tabindex="0"></button>
-								<button class="jp-play" role="button" tabindex="0"></button>
-								<button class="jp-stop" role="button" tabindex="0"></button>
-								<button class="jp-next" role="button" tabindex="0"></button>
-							</div>
-							<div class="jp-current-time" role="timer" aria-label="time">00:00</div> /
-							<div class="jp-duration" role="timer" aria-label="duration">04:27</div>
-						</div>
-					</div>
-				</div>	
-				<div class="jp-playlist ">
-					<ul style="display: block;"><li class="jp-playlist-current"><div><div class="jp-playlist-item jp-playlist-current" tabindex="0">Cro Magnon Man <span class="jp-artist">The Stark Palace</span></div></div></li></ul>
-				</div>
-			</div>
-		</div>
-	</body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,500italic,300italic,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="nav">  
+		<h1><a href="periode.html">Utforsk</a></h1>
+		<h1><a href="Konserter.html">Konserter</a></h1>
+		<h1><a href="Spilleliste.html">Spilleliste</h1>
+    </div>
+    <div id="innstillinger">
+	  	<a href="innstillinger.html">
+	    	<img src="ikon/innstillinger.png" class="innstillinger" \>
+	  	</a>                            
+	</div>
+</body>
 </html>

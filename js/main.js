@@ -1,4 +1,3 @@
-
 window.onload = function () {
     // TODO:: Do your initialization job
 
