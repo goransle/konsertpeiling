@@ -12,6 +12,12 @@ button{
 	background-repeat: no-repeat;
 	background-position: center;
 }
+#info{
+	background-image: url(ikon/info.png);
+}
+#liker{
+	background-image: url(ikon/liker.png);
+}
 .jp-previous{
 	background-image: url("/ikon/forrigesang.png");
 }
