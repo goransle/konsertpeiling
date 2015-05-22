@@ -61,6 +61,9 @@ $(window).load(function(){
 		//console.log(currentArtist);
 
 	});
+	$(".infoToggle").click(function () {
+		$("#artistInfo, #jp_container_1").slideToggle();
+	});
 
 	//bruker jplayer http://jplayer.org/latest/demo-02-jPlayerPlaylist/
 	var spilleliste = new jPlayerPlaylist({
@@ -259,6 +262,9 @@ $(window).load(function(){
 		trimmedArtist = currentArtist.replace(/\s/g, '');
 		console.log(trimmedArtist);
 		$("#poster").attr("src", "/bilde/" + trimmedArtist + ".jpg");
+		
+		$("#artistInfo h1").html(currentArtist);
+
 	}
 	function rekalkuler(){
 		clear();

@@ -1,109 +1,129 @@
 body {
-    background-color: black;
-    font-family: 'Roboto';
-    font-style: normal;
+	background-color: black;
+	font-family: 'Roboto';
+	font-style: normal;
 	color: white;
+}
+form{
+	font-size: 2em;
+	margin-left: 1em;
+	margin-right: auto;
+	vertical-align: middle;
 }
 
 a {
-    color: #b7a4ce;
-    text-decoration:none;  
+	color: #b7a4ce;
+	text-decoration:none;  
 } 
 
 p {
-    color: white;
-    font-weight: 300;
-    font-size: 110%;
-    line-height: 16pt;
+	color: white;
+	font-weight: 300;
+	font-size: 110%;
+	line-height: 16pt;
 } 
 
 #nav {
-    color: #b7a4ce;
-    text-align: center;
-    position: relative;
-    top: 75px;
-    line-height: 65px;
+	color: #b7a4ce;
+	text-align: center;
+	position: relative;
+	top: 75px;
+	line-height: 65px;
+}
+.button{
+	background-color: transparent;
+	border: none;
+	height: 75px;
+	width: 75px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image:url(../ikon/frem.png);
+	height: 54px;
+	width: 100px;
+	position: fixed;
+	top: 400px;
+	right: 20px;
 }
 
 h1 {
-    font-size: 280%;
-    text-transform: uppercase;
-    color:  #b7a4ce;
-    position: relative;
-    font-weight: 700;
+	font-size: 280%;
+	text-transform: uppercase;
+	color:  #b7a4ce;
+	position: relative;
+	font-weight: 700;
 }
 
 h2 {
-    color: #b7a4ce;
-    font-size: 190%;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    top: 18px; 
-    margin-top: -15px; 
+	color: #b7a4ce;
+	font-size: 190%;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	top: 18px; 
+	margin-top: -15px; 
 }
 
 h3  {
-    font-weight: 400;
-    font-style: italic;
-    color: #12808D;
-    font-size: 130%;
-    text-align: center;
-    margin-top: -5px;
-    width: 300px;  
-    margin-left: 20px;
-    line-height: 17pt;
+	font-weight: 400;
+	font-style: italic;
+	color: #12808D;
+	font-size: 130%;
+	text-align: center;
+	margin-top: -5px;
+	width: 300px;  
+	margin-left: 20px;
+	line-height: 17pt;
 }
 
 .konserter  {
-    font-weight: 400;
-    font-style: italic;
-    color: #12808D;
-    font-size: 130%;
-    text-align: left;
-    margin: 2px;
+	font-weight: 400;
+	font-style: italic;
+	color: #12808D;
+	font-size: 130%;
+	text-align: left;
+	margin: 2px;
 }
 
 h4  {
-    color: white;
-    line-height: 23px;
-    font-size: 120%;
-    font-weight: 500;
-    margin: 0px;
+	color: white;
+	line-height: 23px;
+	font-size: 120%;
+	font-weight: 500;
+	margin: 0px;
 }
 td{
 	width: 150px;
 }
 
 .tableimg  {
-    padding-top: 5px;
-    width: 144px;
-    height: 110px;
-    float: left;
-    background-color: #282828; 
+	padding-top: 5px;
+	width: 144px;
+	height: 110px;
+	float: left;
+	background-color: #282828; 
 }
 
 #frem {
-    position: fixed;
-    top: 400px;
-    right: 20px;
+	position: fixed;
+	top: 400px;
+	right: 20px;
 }
 
 #rullegardin {
-    color: #491c4a;
-    font-family: 'Roboto';
-    font-size: 300%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    line-height: 30px;
-    font-weight: 700;
-    position: fixed;
-    top: 100px;
-    left: 0px;
-    width: 360px;
-    height: 220px;
-    text-align: center;
+	color: #491c4a;
+	font-family: 'Roboto';
+	font-size: 300%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 30px;
+	font-weight: 700;
+	position: fixed;
+	top: 100px;
+	left: 0px;
+	width: 360px;
+	height: 220px;
+	text-align: center;
 }
 /*
 #rullegardin .select  {
@@ -112,128 +132,135 @@ font-size: 30px;
 }*/
 
 .multiselect {
-    left: 100px;
-    margin-top: 20px;
-    overflow:auto;
-    font-size: 120%;
-    color: #FFF;
-    line-height: 23pt;
-    margin-left: 120px;
+	left: 100px;
+	margin-top: 20px;
+	overflow:auto;
+	font-size: 120%;
+	color: #FFF;
+	line-height: 23pt;
+	margin-left: 120px;
 }
- 
+
 .multiselect label {
-    display:block;
+	display:block;
 }
- 
+
 .multiselect-on {
-    color:#FFF;
-    background-color:#000;
+	color:#FFF;
+	background-color:#000;
 }
 
 #play {
-    position: relative;
-    text-align: center;
-    top: 170px;
-    width: 340px;
+	position: relative;
+	text-align: center;
+	top: 170px;
+	width: 340px;
 }
 
 #play .playknapp {
-    width: 110px;
+	width: 110px;
 }
 
 #play .fsang  {
-    float: left;
-    padding-top: 20px;
+	float: left;
+	padding-top: 20px;
 }
 
 #play .nsang  {
-    float: right;
-    padding-top: 20px;
+	float: right;
+	padding-top: 20px;
 }
 
 #meir {
-    position: fixed;
-    left: 40px;
-    top: 400px; 
+	position: fixed;
+	left: 40px;
+	top: 400px; 
 }
 
 #meir .infoknapp  {
-    width: 60px;
-    padding-left: 35px;
+	width: 60px;
+	padding-left: 35px;
 }
 
 #meir .likerknapp  {
-    width: 60px;
-    padding-left: 80px;
+	width: 60px;
+	padding-left: 80px;
 }
 
 #innstillinger img  {
-    right: 20px;
-    top: 400px; 
-    position: fixed;
-    width: 60px;
+	right: 20px;
+	top: 400px; 
+	position: fixed;
+	width: 60px;
 }
 
 #albumphoto {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 
 #artistname {
-    font-style: 700;
-    text-align: center;
-    color: white;
-    position: relative;
-    top: 175px;
+	font-style: 700;
+	text-align: center;
+	color: white;
+	position: relative;
+	top: 175px;
 }
 
 .artistinfo {
-    font-style: 500;
-    font-size: 110%;
-    color: white;
-    position: relative;
-    top: -5px;
-    text-align: center;
+	font-style: 500;
+	font-size: 110%;
+	color: white;
+	position: relative;
+	top: -5px;
+	text-align: center;
 }
 
 .biotittel  {
-    color: white;
-    line-height: 23px;
-    font-size: 120%;
-    font-weight: 500;
-    margin: 8px;
-    text-align: left;
+	color: white;
+	line-height: 23px;
+	font-size: 120%;
+	font-weight: 500;
+	margin: 8px;
+	text-align: left;
 }
 
 #bio {
-    color: white;
-    font-size: 100%;
-    position: relative;
-    margin-top: -10px;
-    margin-left: 8px;
-    margin-right: 8px;
+	color: white;
+	font-size: 100%;
+	position: relative;
+	margin-top: -10px;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 #konsertliste {
-    color: red;
+	color: red;
 }
 
 #periodetekst {
-    position: fixed;
-    top: 320px;
-    color: white;
-    width: 330px;
-    line-height: 18pt;
-    left: 15px;
-    text-align: center;
+	position: fixed;
+	top: 320px;
+	color: white;
+	width: 330px;
+	line-height: 18pt;
+	left: 15px;
+	text-align: center;
 }
 
+<<<<<<< HEAD
 #bioknapp {
     position: relative;
         text-align: left;
     left: 40px;
 
+=======
+#spillavlyd {
+	position: fixed;
+	right: 10px;
+	top: 80px;
+>>>>>>> origin/master
 }
 
 #intervjuknapp
@@ -246,37 +273,37 @@ position: relative;
 
 /*
 #header {
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding:5px;
+background-color:black;
+color:white;
+text-align:center;
+padding:5px;
 }
 
 #nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
-    width:100px;
-    float:left;
-    padding:5px; 
+line-height:30px;
+background-color:#eeeeee;
+height:300px;
+width:100px;
+float:left;
+padding:5px; 
 }
 
 #section {
-    width:350px;
-    float:left;
-    padding:10px; 
+width:350px;
+float:left;
+padding:10px; 
 }
 
 #footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px; 
+background-color:black;
+color:white;
+clear:both;
+text-align:center;
+padding:5px; 
 }
 
 #nav {
-    border:1px solid grey;
-    padding:10px;
-    margin:30px;
-    text-align: center;
+border:1px solid grey;
+padding:10px;
+margin:30px;
+text-align: center;
