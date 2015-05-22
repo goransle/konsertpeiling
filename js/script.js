@@ -262,6 +262,9 @@ $(window).load(function(){
 		trimmedArtist = currentArtist.replace(/\s/g, '');
 		console.log(trimmedArtist);
 		$("#poster").attr("src", "/bilde/" + trimmedArtist + ".jpg");
+		
+		$("#artistInfo h1").html(currentArtist);
+
 	}
 	function rekalkuler(){
 		clear();
