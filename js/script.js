@@ -5,7 +5,23 @@ $(window).load(function(){
 	var playedSongs = [""];
 	var artister = [""];
 	var lokaler = [""];
-	var sjangre =["Folk", "Rock", "Hip-hop"];
+	var sjangre =[];
+	if (getQuery('Rock')=="true")
+		sjangre.push("Rock"), console.log("ROCKK");
+	if (getQuery('Folk')=="true")
+		sjangre.push("Folk");
+	if (getQuery('Pop')=="true")
+		sjangre.push("Pop");
+	if (getQuery('Hip-hop')=="true")
+		sjangre.push("Hip-hop");
+	if (getQuery('Country')=="true")
+		sjangre.push("Country");
+	if (getQuery('Klassisk')=="true")
+		sjangre.push("Klassisk");
+	if (getQuery('Reggea')=="true")
+		sjangre.push("Reggea");
+
+
 	var currentTrack = $("Intro-The Taxpayers").text();
 	var split = currentTrack.split("-");
 	var currentArtist = split[2];
@@ -266,4 +282,17 @@ $(window).load(function(){
 		//denne gjer noe som ting til å fungere, baklengs
 		artister.shift();
 	}
+	// Parse URL Queries Method
+	function getQuery(query) {
+		query = query.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		var expr = "[\\?&]"+query+"=([^&#]*)";
+		var regex = new RegExp( expr );
+		var results = regex.exec( window.location.href );
+		if( results !== null ) {
+			return results[1];
+			return decodeURIComponent(results[1].replace(/\+/g, " "));
+		} else {
+			return false;
+		}
+	};
 });
