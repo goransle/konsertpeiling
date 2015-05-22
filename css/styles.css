@@ -21,6 +21,8 @@ p {
 	font-weight: 300;
 	font-size: 110%;
 	line-height: 16pt;
+	margin-top: 2px;
+	margin-bottom: 2px;
 } 
 
 #nav {
@@ -88,12 +90,16 @@ h3  {
 h4  {
 	color: white;
 	line-height: 23px;
-	font-size: 120%;
+	font-size: 115%;
 	font-weight: 500;
 	margin: 0px;
 }
 td{
 	width: 150px;
+}
+
+td img  {
+	padding-bottom: 5px;
 }
 
 .tableimg  {
