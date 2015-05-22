@@ -6,6 +6,14 @@ $(window).load(function(){
 	var artister = [""];
 	var lokaler = [""];
 	var sjangre =[];
+	var currentLokale = "";
+	var currentTid = "";
+	var currentDato = "";
+	var currentPris = "";
+	var currentBio = "";
+	var currentReportasje = "";
+	var currentIntervju = "";
+	var distanse = 0;
 	if (getQuery('Rock')=="true")
 		sjangre.push("Rock"), console.log("ROCKK");
 	if (getQuery('Folk')=="true")
@@ -246,6 +254,18 @@ $(window).load(function(){
 			});
 		});
 	}
+	function getInfo(artist){
+		$.getJSON( "JSON/lokaler.json", function( json ){
+			$.each(json.konserter.konserter, function( key, value){
+				if(value.artist === artist){
+					currentLokale = value.lokale;
+					currentTid = value.klokka;
+					currentDato = value.dato;
+					currentPris = value.pris;
+				}
+			});
+		});
+	}
 	function clear(){
 		$("#resultat").empty();
 		$("#lokaler").empty();
@@ -261,10 +281,36 @@ $(window).load(function(){
 		currentArtist = split[2];
 		trimmedArtist = currentArtist.replace(/\s/g, '');
 		console.log(trimmedArtist);
+		$.getJSON( "JSON/lokaler.json", function( json ){
+			$.each(json.konserter.konserter, function( key, value){
+				if(value.artist == currentArtist){
+					currentLokale = value.lokale;
+					currentTid = value.klokka;
+					currentDato = value.dato;
+					currentPris = value.pris;
+					degTilKonserten(currentLokale);
+					$("#konsertInfo").html("Hvor: " + currentLokale + "<br /> Når: " + currentDato + " " + currentTid + "<br /> CC:" + currentPris)
+				}
+			});
+		});
 		$("#poster").attr("src", "/bilde/" + trimmedArtist + ".jpg");
-		
-		$("#artistInfo h1").html(currentArtist);
 
+		$("#artistInfo h1").html(currentArtist);
+	}
+	function degTilKonserten(lokale){
+		var splits = coords.split(", ");
+		var lat = splits[0];
+		var long = splits[1];
+		$.getJSON( "JSON/lokaler.json", function( json ){
+			$.each(json.konserter.lokaler, function( key, value){
+				if(value.location == lokale){
+
+					a = getDistanceFromLatLonInKm(lat, long, value.lat, value.long);
+					console.log(a);
+					$("#distanse").html("Distanse: " + a.toFixed(2) + " km");
+				}
+			});
+		});
 	}
 	function rekalkuler(){
 		clear();
@@ -272,15 +318,6 @@ $(window).load(function(){
 		coords = "60.388685, 5.326101";
 		//coords = $("#locationInfo").text();
 		console.log(coords);
-		var splits = coords.split(", ");
-		var lat = splits[0];
-		var long = splits[1];
-
-		var kvarteretlat = 60.389923;
-		var kvarteretlong = 5.321825;
-
-		var a = getDistanceFromLatLonInKm(lat, long, kvarteretlat, kvarteretlong);
-		$("#resultat").append(a.toFixed(2) + " km");
 		finnLokaler(coords, 10);
 		//finnKonserter("Det Akademiske Kvarter");
 		//finnSanger("Gatas Parliament");

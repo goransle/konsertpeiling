@@ -3,6 +3,8 @@ body{
 	width:360px;
 	height: 480px;
 	text-align: center;
+	color: white;
+	background-color: black;
 }
 button{
 	background-color: transparent;
@@ -50,7 +52,9 @@ button{
 }
 .jp-playlist-current{
 	display: block;
+	font-size: 1.2em;
 	color: white;
+	max-width: 350px;
 
 }
 .jp-playlist-item-remove{
@@ -67,6 +71,7 @@ a{
 .jp-duration, .jp-current-time{
 	display: inline;
 	color: white;
+	font-size: 1.2em;
 
 }
 #info{
@@ -75,9 +80,32 @@ a{
 #liker{
 	background-image: url(ikon/liker.png);
 }
+#close{
+	background-image: url(ikon/lukk.png);
+}
+#bioknapp{
+	background-image: url(ikon/biolyd.png);
+	width: 106px;
+}
+#reportasje{
+	background-image: url(ikon/intervjulyd.png);
+	width: 153px;
+}
+#artistInfo{
+	font-size: 1.5em;
+	font-family: sans-serif;
+	line-height: 1.5em;
+	color: white;
+	background-color: black;
+}
+#artistInfo h1{
+	font-size: 1.75em;
+	width: 100%;
+	padding-bottom: 0.5em;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
