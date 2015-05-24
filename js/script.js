@@ -14,6 +14,9 @@ $(window).load(function(){
 	var currentReportasje = "";
 	var currentIntervju = "";
 	var distanse = 0;
+	$(".jp-next, .jp-previous").hide();
+	$("#bioKnapp, #reportasje").css("opacity", "0.1");
+
 	if (getQuery('Rock')=="true")
 		sjangre.push("Rock"), console.log("ROCKK");
 	if (getQuery('Folk')=="true")
@@ -30,7 +33,7 @@ $(window).load(function(){
 		sjangre.push("Reggea");
 
 
-	var currentTrack = $("Intro-The Taxpayers").text();
+	var currentTrack = $("Intro - The Taxpayers").text();
 	var split = currentTrack.split("-");
 	var currentArtist = split[2];
 	rekalkuler();
@@ -41,6 +44,8 @@ $(window).load(function(){
 	$(".jp-play").click(function() {
 		$(".jp-play").hide();
 		$(".jp-stop").show();
+		$(".jp-next").fadeIn();
+		$(".jp-previous").fadeIn();
 		rekalkuler();
 	});
 	$("#jp_container_1").bind($.jPlayer.event.play, function(event) {
@@ -60,7 +65,7 @@ $(window).load(function(){
 		$(".jp-stop").show();
 	});
 	$("#reportasje").click(function() {
-		if(currentArtist == "Egil Olsen"){
+		if(currentArtist == " Egil Olsen"){
 			$("#jquery_jplayer_1").jPlayer("pause");
 			$("#bioLyd").html("");
 			$("#bioLyd").html("<audio src='/lydinnhold/reportasje.mp3' autoplay />");
@@ -82,10 +87,10 @@ $(window).load(function(){
 
 	});
 	$("#info").click(function() {
-		if(currentArtist == "Vestlandsfanden"){
+		if(currentArtist == " Vestlandsfanden"){
 			$("#bioKnapp").css("opacity", "1");
 		}
-		if(currentArtist == "Egil Olsen"){
+		if(currentArtist == " Egil Olsen"){
 			$("#reportasje").css("opacity", "1");
 		}
 	});
@@ -303,14 +308,14 @@ $(window).load(function(){
 	}
 	function updatePoster(){
 		currentTrack = $(".jp-playlist-current").text();
-		split = currentTrack.split(" - ");
+		split = currentTrack.split("  ");
 		console.log(split[2]);
 		currentArtist = split[2];
 		trimmedArtist = currentArtist.replace(/\s/g, '');
 		console.log(trimmedArtist);
 		$.getJSON( "JSON/lokaler.json", function( json ){
 			$.each(json.konserter.konserter, function( key, value){
-				if(value.artist == currentArtist){
+				if( " " + value.artist == currentArtist){
 					currentLokale = value.lokale;
 					currentTid = value.klokka;
 					currentDato = value.dato;
