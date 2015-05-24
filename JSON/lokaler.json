@@ -211,6 +211,10 @@
 				"sjanger": "Folk",
 				"sanger": [
 					{
+						"navn": "Intervju",
+						"filplassering": "/lydinnhold/Reportasje.mp3"
+					},
+					{
 						"navn": "California",
 						"filplassering": "/media/California.mp3"
 					},

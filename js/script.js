@@ -98,12 +98,19 @@ $(window).load(function(){
 		if(currentArtist == " Vestlandsfanden"){
 			$("#jquery_jplayer_1").jPlayer("pause");
 			$("#bioLyd").html("");
-			$("#bioLyd").html("<audio src='/lydinnhold/test-vestlandsfanden.mp3' autoplay />");
+			$("#bioLyd").html("<audio src='/lydinnhold/test-vestlandsfanden.mp3' autoplay> </audio>");
 		}
 		if(currentArtist == " Katzenjammer"){
 			$("#jquery_jplayer_1").jPlayer("pause");
 			$("#bioLyd").html("");
-			$("#bioLyd").html("<audio src='/lydinnhold/katzenjammer.mp3' autoplay />");
+			$("#bioLyd").html("<audio src='/lydinnhold/Katzenjammer.mp3' autoplay> </audio>");
+		}
+	});
+	$("#reportasje").click(function() {
+		if(currentArtist == " Egil Olsen"){
+			$("#jquery_jplayer_1").jPlayer("pause");
+			$("#bioLyd").html("");
+			$("#bioLyd").html("<audio src='/lydinnhold/Reportasje.mp3' autoplay></audio>");
 		}
 	});
 	$(".infoToggle").click(function () {
