@@ -59,6 +59,18 @@ $(window).load(function(){
 		$(".jp-play").hide();
 		$(".jp-stop").show();
 	});
+	$("#reportasje").click(function() {
+		if(currentArtist == "Egil Olsen"){
+			$("#jquery_jplayer_1").jPlayer("pause");
+			$("#bioLyd").html("");
+			$("#bioLyd").html("<audio src='/lydinnhold/reportasje.mp3' autoplay />");
+		}
+	});
+	$("#close").click(function() {
+		$("#jquery_jplayer_1").jPlayer("play");
+		$("#bioLyd").html("");
+		$("#bioKnapp, #reportasje").css("opacity", "0.1");
+	});
 	//
 	$("#hi").click(function () {
 		rekalkuler();
@@ -68,6 +80,21 @@ $(window).load(function(){
 		console.log(lokaler);
 		//console.log(currentArtist);
 
+	});
+	$("#info").click(function() {
+		if(currentArtist == "Vestlandsfanden"){
+			$("#bioKnapp").css("opacity", "1");
+		}
+		if(currentArtist == "Egil Olsen"){
+			$("#reportasje").css("opacity", "1");
+		}
+	});
+	$("#bioKnapp").click(function() {
+		if(currentArtist == "Vestlandsfanden"){
+			$("#jquery_jplayer_1").jPlayer("pause");
+			$("#bioLyd").html("");
+			$("#bioLyd").html("<audio src='/lydinnhold/test-vestlandsfanden.mp3' autoplay />");
+		}
 	});
 	$(".infoToggle").click(function () {
 		$("#artistInfo, #jp_container_1").slideToggle();

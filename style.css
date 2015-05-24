@@ -86,10 +86,12 @@ a{
 #bioknapp{
 	background-image: url(ikon/biolyd.png);
 	width: 106px;
+	opacity: 0.1;
 }
 #reportasje{
 	background-image: url(ikon/intervjulyd.png);
 	width: 153px;
+	opacity: 0.1;
 }
 #artistInfo{
 	font-size: 1.5em;
