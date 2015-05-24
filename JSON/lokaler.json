@@ -167,6 +167,10 @@
 				"sjanger": "Klassisk",
 				"sanger": [
 					{
+						"navn": "Klassisk på kvarteret",
+						"filplassering": "/lydinnhold/intervju.mp3"
+					},
+					{
 						"navn": "Bojarenes Inntogsmarsj",
 						"filplassering": "/media/BojarenesInntogsmars.mp3"
 					}

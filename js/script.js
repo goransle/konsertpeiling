@@ -87,7 +87,7 @@ $(window).load(function(){
 
 	});
 	$("#info").click(function() {
-		if(currentArtist == " Vestlandsfanden"){
+		if(currentArtist == " Vestlandsfanden" || currentArtist == " Katzenjammer"){
 			$("#bioKnapp").css("opacity", "1");
 		}
 		if(currentArtist == " Egil Olsen"){
@@ -95,10 +95,15 @@ $(window).load(function(){
 		}
 	});
 	$("#bioKnapp").click(function() {
-		if(currentArtist == "Vestlandsfanden"){
+		if(currentArtist == " Vestlandsfanden"){
 			$("#jquery_jplayer_1").jPlayer("pause");
 			$("#bioLyd").html("");
 			$("#bioLyd").html("<audio src='/lydinnhold/test-vestlandsfanden.mp3' autoplay />");
+		}
+		if(currentArtist == " Katzenjammer"){
+			$("#jquery_jplayer_1").jPlayer("pause");
+			$("#bioLyd").html("");
+			$("#bioLyd").html("<audio src='/lydinnhold/katzenjammer.mp3' autoplay />");
 		}
 	});
 	$(".infoToggle").click(function () {
