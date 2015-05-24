@@ -29,8 +29,8 @@ $(window).load(function(){
 		sjangre.push("Country");
 	if (getQuery('Klassisk')=="true")
 		sjangre.push("Klassisk");
-	if (getQuery('Reggea')=="true")
-		sjangre.push("Reggea");
+	if (getQuery('Reggae')=="true")
+		sjangre.push("Reggae");
 
 
 	var currentTrack = $("Intro - The Taxpayers").text();

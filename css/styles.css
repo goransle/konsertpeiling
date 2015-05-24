@@ -3,6 +3,7 @@ body {
 	font-family: 'Roboto';
 	font-style: normal;
 	color: white;
+	outline:none;
 }
 form{
 	font-size: 2em;
@@ -251,23 +252,23 @@ font-size: 30px;
 
 <<<<<<< HEAD
 #bioknapp {
-    position: relative;
-        text-align: left;
-    left: 40px;
+	position: relative;
+	text-align: left;
+	left: 40px;
 
-=======
-#spillavlyd {
-	position: fixed;
-	right: 10px;
-	top: 80px;
->>>>>>> origin/master
+	=======
+	#spillavlyd {
+		position: fixed;
+		right: 10px;
+		top: 80px;
+		>>>>>>> origin/master
+	}
+
+	#intervjuknapp
+	position: relative;
+	text-align: center;
+	left: 130px;
 }
-
-#intervjuknapp
-position: relative;
-    text-align: center;
-         left: 130px;
-     }
 }
 
 

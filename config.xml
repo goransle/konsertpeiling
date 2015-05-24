@@ -3,7 +3,7 @@
     <tizen:application id="cPsuoqDQOJ.thelooks" package="cPsuoqDQOJ" required_version="2.2"/>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
-    <icon src="icon.jpg"/>
+    <icon src="icon.png"/>
     <name>Hørbart BERGEN</name>
     <tizen:privilege name="http://tizen.org/privilege/internet"/>
     <tizen:privilege name="http://tizen.org/privilege/location"/>

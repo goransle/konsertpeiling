@@ -5,6 +5,11 @@ body{
 	text-align: center;
 	color: white;
 	background-color: black;
+	outline:none;
+
+}
+#poster{
+	height: 240px;
 }
 button{
 	background-color: transparent;
@@ -66,6 +71,9 @@ button{
 	font-size: 1.5em;
 	color: white;
 	max-width: 350px;
+	margin-left: 5px;
+	margin-right: auto;
+
 
 }
 .jp-playlist-item-remove{
@@ -73,7 +81,7 @@ button{
 }
 .jp-artist{
 	display: block;
-	font-size-adjust: -0.2em;
+	font-size: 0.75em;
 }
 #jquery_jplayer_1{
 	display: block;
@@ -86,7 +94,7 @@ a{
 .jp-duration, .jp-current-time{
 	display: inline;
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 #info{
 	background-image: url(ikon/info.png);

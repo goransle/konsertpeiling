@@ -167,7 +167,7 @@
 				"sjanger": "Klassisk",
 				"sanger": [
 					{
-						"navn": "Klassisk på kvarteret",
+						"navn": "Klassiskprat",
 						"filplassering": "/lydinnhold/intervju.mp3"
 					},
 					{
@@ -178,7 +178,7 @@
 			},
 			{
 				"navn": "Admiral P",
-				"sjanger": "Reggea, Hip-hop",
+				"sjanger": "Reggae, Hip-hop",
 				"sanger": [
 					{
 						"navn": "Kallenavn",
