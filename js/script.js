@@ -35,27 +35,18 @@ $(window).load(function(){
 		sjangre.push("Country");
 	if (getQuery('Klassisk')=="true"){
 		sjangre.push("Klassisk");
-		artister.push("Bergen Filharmoniske Orkester");
 	}
-	if (getQuery('Reggae')=="true"){
-		sjangre.push("Reggae");
-		artister.push("Admiral P");
-
-	}
-
-
-	if( artister.length < 1){
+	if(sjangre.length === 0){
 		sjangre.push("Folk");
 		sjangre.push("Rock");
-		sjangre.push("Reggae");
 		sjangre.push("Pop");
 		sjangre.push("Klassisk");
 		sjangre.push("Hip-hop");
 		console.log("tomt for sanger");
 		console.log(playedSongs.length);
 		console.log(artister.length);
-		console.log(artister);
 	}
+
 
 	var currentTrack = $("Intro - The Taxpayers").text();
 	var split = currentTrack.split("-");
@@ -298,7 +289,7 @@ $(window).load(function(){
 					if(value.lokale == lokale){
 						if(value.artist == y.navn){
 							$.each(y.sjanger.split(", "), function( i, j ){
-								if($.inArray(value.artist, artister) == -1 && $.inArray(j, sjangre) !== -1){
+								if($.inArray(value.artist, artister) == -1 && $.inArray(j, sjangre) > -1){
 									artister.push(value.artist);
 								}
 							});
