@@ -49,8 +49,9 @@ $(window).load(function(){
 		rekalkuler();
 	});
 	$("#liker").click(function(){
-		likte.push(currentArtist);
-		localStorage.setItem('testStorage', JSON.stringify(likte));
+			likte.push(currentArtist);
+			localStorage.setItem('testStorage', JSON.stringify(likte));
+		}
 
 	});
 	$("#jp_container_1").bind($.jPlayer.event.play, function(event) {
@@ -69,16 +70,10 @@ $(window).load(function(){
 		$(".jp-play").hide();
 		$(".jp-stop").show();
 	});
-	$("#reportasje").click(function() {
-		if(currentArtist == " Egil Olsen"){
-			$("#jquery_jplayer_1").jPlayer("pause");
-			$("#bioLyd").html("");
-			$("#bioLyd").html("<audio src='/lydinnhold/reportasje.mp3' autoplay />");
-		}
-	});
 	$("#close").click(function() {
 		$("#jquery_jplayer_1").jPlayer("play");
-		$("#bioLyd").html("");
+		$("#bioLyd audio").trigger("pause");
+		$("#bioLyd").empty();
 		$("#bioKnapp, #reportasje").css("opacity", "0.1");
 	});
 	//
@@ -102,25 +97,27 @@ $(window).load(function(){
 	$("#bioKnapp").click(function() {
 		if(currentArtist == " Vestlandsfanden"){
 			$("#jquery_jplayer_1").jPlayer("pause");
-			$("#bioLyd").html("");
+			$("#bioLyd audio").trigger("pause");
+			$("#bioLyd").empty();
 			$("#bioLyd").html("<audio src='/lydinnhold/test-vestlandsfanden.mp3' autoplay> </audio>");
 		}
 		if(currentArtist == " Katzenjammer"){
 			$("#jquery_jplayer_1").jPlayer("pause");
-			$("#bioLyd").html("");
+			$("#bioLyd audio").trigger("pause");
+			$("#bioLyd").empty();
 			$("#bioLyd").html("<audio src='/lydinnhold/Katzenjammer.mp3' autoplay> </audio>");
 		}
 	});
 	$("#reportasje").click(function() {
 		if(currentArtist == " Egil Olsen"){
 			$("#jquery_jplayer_1").jPlayer("pause");
-			$("#bioLyd").html("");
+			$("#bioLyd audio").trigger("pause");
+			$("#bioLyd").empty();
 			$("#bioLyd").html("<audio src='/lydinnhold/Reportasje.mp3' autoplay></audio>");
 		}
 	});
 	$(".infoToggle").click(function () {
 		$("#artistInfo, #jp_container_1").slideToggle();
-		console.log(likte);
 	});
 
 	//bruker jplayer http://jplayer.org/latest/demo-02-jPlayerPlaylist/
