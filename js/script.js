@@ -49,6 +49,7 @@ $(window).load(function(){
 		rekalkuler();
 	});
 	$("#liker").click(function(){
+		if($.inArray(currentArtist, likte) == -1 && currentArtist != null){
 			likte.push(currentArtist);
 			localStorage.setItem('testStorage', JSON.stringify(likte));
 		}
