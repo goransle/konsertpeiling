@@ -242,6 +242,10 @@ font-size: 30px;
 	margin-right: 8px;
 }
 
+#likteArtister {
+    font-size: 300%;
+}
+
 #konsertliste {
 	color: red;
 }
