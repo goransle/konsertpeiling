@@ -14,7 +14,12 @@ $(window).load(function(){
 	var currentReportasje = "";
 	var currentIntervju = "";
 	var distanse = 0;
-	var likte = [];
+	if (localStorage.getItem("testStorage") !== null) {
+		var likte = JSON.parse(localStorage.getItem('testStorage'));
+	}
+	else{
+		var likte = [];
+	}
 	$(".jp-next, .jp-previous").hide();
 	$("#bioKnapp, #reportasje").css("opacity", "0.1");
 
@@ -28,10 +33,28 @@ $(window).load(function(){
 		sjangre.push("Hip-hop");
 	if (getQuery('Country')=="true")
 		sjangre.push("Country");
-	if (getQuery('Klassisk')=="true")
+	if (getQuery('Klassisk')=="true"){
 		sjangre.push("Klassisk");
-	if (getQuery('Reggae')=="true")
+		artister.push("Bergen Filharmoniske Orkester");
+	}
+	if (getQuery('Reggae')=="true"){
 		sjangre.push("Reggae");
+		artister.push("Admiral P");
+
+	}
+
+	if( artister.length < 1){
+		sjangre.push("Folk");
+		sjangre.push("Rock");
+		sjangre.push("Reggae");
+		sjangre.push("Pop");
+		sjangre.push("Klassisk");
+		sjangre.push("Hip-hop");
+		console.log("tomt for sanger");
+		console.log(playedSongs.length);
+		console.log(artister.length);
+		console.log(artister);
+	}
 
 	var currentTrack = $("Intro - The Taxpayers").text();
 	var split = currentTrack.split("-");
@@ -47,6 +70,8 @@ $(window).load(function(){
 		$(".jp-next").fadeIn();
 		$(".jp-previous").fadeIn();
 		rekalkuler();
+		console.log(sjangre);
+		console.log(artister);
 	});
 	$("#liker").click(function(){
 		if($.inArray(currentArtist, likte) == -1 && currentArtist != null){
@@ -70,12 +95,26 @@ $(window).load(function(){
 		playSongs();
 		$(".jp-play").hide();
 		$(".jp-stop").show();
+		if(playedSongs.length >= artister.length && playedSongs.length != 1){
+			sjangre.push("Folk");
+			sjangre.push("Rock");
+			sjangre.push("Reggae");
+			sjangre.push("Pop");
+			sjangre.push("Klassisk");
+			sjangre.push("Hip-hop");
+			console.log("tomt for sanger");
+			console.log(playedSongs.length);
+			console.log(artister.length);
+
+		}
 	});
 	$("#close").click(function() {
 		$("#jquery_jplayer_1").jPlayer("play");
 		$("#bioLyd audio").trigger("pause");
 		$("#bioLyd").empty();
 		$("#bioKnapp, #reportasje").css("opacity", "0.1");
+		$(".jp-stop").show();
+		$(".jp-play").hide();
 	});
 	//
 	$("#hi").click(function () {
@@ -256,10 +295,9 @@ $(window).load(function(){
 			$.each(json.konserter.konserter, function( key, value ){
 				$.each(json.konserter.artister, function( x, y ){
 					if(value.lokale == lokale){
-						if(value.artist = y.navn){
+						if(value.artist == y.navn){
 							$.each(y.sjanger.split(", "), function( i, j ){
 								if($.inArray(value.artist, artister) == -1 && $.inArray(j, sjangre) !== -1){
-
 									artister.push(value.artist);
 								}
 							});
