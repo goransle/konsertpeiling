@@ -14,6 +14,7 @@ $(window).load(function(){
 	var currentReportasje = "";
 	var currentIntervju = "";
 	var distanse = 0;
+	var likte = [];
 	$(".jp-next, .jp-previous").hide();
 	$("#bioKnapp, #reportasje").css("opacity", "0.1");
 
@@ -32,7 +33,6 @@ $(window).load(function(){
 	if (getQuery('Reggae')=="true")
 		sjangre.push("Reggae");
 
-
 	var currentTrack = $("Intro - The Taxpayers").text();
 	var split = currentTrack.split("-");
 	var currentArtist = split[2];
@@ -47,6 +47,11 @@ $(window).load(function(){
 		$(".jp-next").fadeIn();
 		$(".jp-previous").fadeIn();
 		rekalkuler();
+	});
+	$("#liker").click(function(){
+		likte.push(currentArtist);
+		localStorage.setItem('testStorage', JSON.stringify(likte));
+
 	});
 	$("#jp_container_1").bind($.jPlayer.event.play, function(event) {
 		updatePoster();
@@ -115,6 +120,7 @@ $(window).load(function(){
 	});
 	$(".infoToggle").click(function () {
 		$("#artistInfo, #jp_container_1").slideToggle();
+		console.log(likte);
 	});
 
 	//bruker jplayer http://jplayer.org/latest/demo-02-jPlayerPlaylist/
