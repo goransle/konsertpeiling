@@ -43,6 +43,7 @@ $(window).load(function(){
 
 	}
 
+
 	if( artister.length < 1){
 		sjangre.push("Folk");
 		sjangre.push("Rock");
