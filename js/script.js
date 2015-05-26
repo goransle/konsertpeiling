@@ -22,6 +22,9 @@ $(window).load(function(){
 	}
 	$(".jp-next, .jp-previous").hide();
 	$("#bioKnapp, #reportasje").css("opacity", "0.1");
+	//sjangre.push(null);
+	artister.push(null);
+
 
 	if (getQuery('Rock')=="true")
 		sjangre.push("Rock"), console.log("ROCKK");
@@ -30,17 +33,24 @@ $(window).load(function(){
 	if (getQuery('Pop')=="true")
 		sjangre.push("Pop");
 	if (getQuery('Hip-hop')=="true")
-		sjangre.push("Hip-hop");
+		sjangre.push("Hip-hop"),
+			artister.push("Jaa9 og OnklP");
+	if (getQuery('Reggae')=="true")
+		sjangre.push("Reggae"),
+			artister.push("Admiral P");
 	if (getQuery('Country')=="true")
 		sjangre.push("Country");
 	if (getQuery('Klassisk')=="true"){
 		sjangre.push("Klassisk");
+		artister.push("Bergen Filharmoniske Orkester");
+
 	}
 	if(sjangre.length === 0){
 		sjangre.push("Folk");
 		sjangre.push("Rock");
 		sjangre.push("Pop");
 		sjangre.push("Klassisk");
+		sjangre.push("Reggae");
 		sjangre.push("Hip-hop");
 		console.log("tomt for sanger");
 		console.log(playedSongs.length);
