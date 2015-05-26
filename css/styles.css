@@ -1,13 +1,12 @@
 body {
 	background-color: black;
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	color: white;
 	outline:none;
-	width: 100%;
-}
-::-webkit-scrollbar { 
-    display: none; 
+	margin: 0;
+	width: 360px;
+	height: 480px;
 }
 form{
 	font-size: 2em;
@@ -62,16 +61,22 @@ button{
 #close{
 	background-image: url(/ikon/lukk.png);
 	width: 57px;
+	margin: 0;
+	padding: 0;
 }
 #bioknapp{
 	background-image: url(/ikon/biolyd.png);
 	width: 104px;
 	opacity: 0.1;
+	margin: 0;
+	padding: 0;
 }
 #reportasje{
 	background-image: url(/ikon/intervjulyd.png);
 	width: 183px;
 	opacity: 0.1;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
@@ -86,6 +91,7 @@ h2 {
 	color: #b7a4ce;
 	font-size: 190%;
 	font-weight: 700;
+	font-family: sans-serif;
 	text-transform: uppercase;
 	text-align: center;
 	position: relative;
@@ -112,6 +118,10 @@ h3  {
 	font-size: 130%;
 	text-align: left;
 	margin: 2px;
+	width: 300px;
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 h4  {
@@ -123,6 +133,7 @@ h4  {
 }
 td{
 	width: 150px;
+	padding: 0;
 }
 
 td img  {
@@ -198,6 +209,9 @@ font-size: 30px;
 	float: left;
 	padding-top: 20px;
 }
+#likteHeader{
+	font-size: 1.75em;
+}
 
 #play .nsang  {
 	float: right;
@@ -240,7 +254,9 @@ font-size: 30px;
 	position: relative;
 	top: 175px;
 }
-
+#artistInfo{
+	width: 100%;
+}
 .artistinfo {
 	font-style: 500;
 	font-size: 110%;
@@ -269,7 +285,9 @@ font-size: 30px;
 }
 
 #likteArtister {
-	font-size: 300%;
+	font-size: 2em;
+	list-style-type: none;
+	line-height: 1.3em;
 }
 
 #konsertliste {
@@ -285,28 +303,9 @@ font-size: 30px;
 	left: 15px;
 	text-align: center;
 }
-
-<<<<<<< HEAD
 #bioknapp {
-	position: relative;
-	text-align: left;
-	left: 40px;
 
-	=======
-	#spillavlyd {
-		position: fixed;
-		right: 10px;
-		top: 80px;
-		>>>>>>> origin/master
-	}
-
-	#intervjuknapp
-	position: relative;
-	text-align: center;
-	left: 130px;
 }
-}
-
 
 /*
 #header {
@@ -344,3 +343,4 @@ border:1px solid grey;
 padding:10px;
 margin:30px;
 text-align: center;
+**/
