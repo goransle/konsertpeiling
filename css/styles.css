@@ -4,6 +4,10 @@ body {
 	font-style: normal;
 	color: white;
 	outline:none;
+	width: 100%;
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
 form{
 	font-size: 2em;
@@ -46,6 +50,28 @@ p {
 	position: fixed;
 	top: 400px;
 	right: 20px;
+}
+button{
+	background-color: transparent;
+	border: none;
+	height: 75px;
+	width: 75px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#close{
+	background-image: url(/ikon/lukk.png);
+	width: 57px;
+}
+#bioknapp{
+	background-image: url(/ikon/biolyd.png);
+	width: 104px;
+	opacity: 0.1;
+}
+#reportasje{
+	background-image: url(/ikon/intervjulyd.png);
+	width: 183px;
+	opacity: 0.1;
 }
 
 h1 {
@@ -243,7 +269,7 @@ font-size: 30px;
 }
 
 #likteArtister {
-    font-size: 300%;
+	font-size: 300%;
 }
 
 #konsertliste {

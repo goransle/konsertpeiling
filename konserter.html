@@ -13,7 +13,7 @@
 		<h2>Konserter i Bergen</h2>
 		<h3 class="konserter">Mandag 20. april</h3> 
 		<table class="tableimg" style="width:100%">
-			<tr>
+			<tr id="vestlandsfanden">
 				<td>
 					<img src="bilde/Vestlandsfanden.jpg" alt="bilde" width="144px"/>
 				</td>
@@ -27,7 +27,7 @@
 
 		<h3 class="konserter">Tirsdag 21. april</h3> 
 		<table class="tableimg" style="width:100%">
-			<tr>
+			<tr id="ebbot">
 				<td>
 					<img src="bilde/EbbotLundberg.jpg" width="144px">	
 				</td>
@@ -41,14 +41,14 @@
 
 		<h3 class="konserter">Onsdag 22. april</h3> 
 		<table class="tableimg" style="width:100%">
-			<tr>
+			<tr id="herman">
 				<td><img src="bilde/Herman'sHermits.jpg" width="144px"></td>
 				<td><h4>Herman Hermits</h4>
 					<p>Madam Felle</p>
 					<p>Pop</p>
 				</td>		
 			</tr>
-			<tr>
+			<tr id="love">
 				<td><img src="bilde/LoveAntell.jpg" width="144px"></td>
 				<td><h4>Love Antell</h4>
 					<p>Garage</p>
@@ -59,7 +59,7 @@
 
 		<h3 class="konserter">Torsdag 23. april</h3> 
 		<table class="tableimg" style="width:100%">
-			<tr>
+			<tr id="katzenjammer">
 				<td><img src="bilde/Katzenjammer.jpg" width="144px"></td>
 				<td><h4>Katzenjammer</h4>
 					<p>USF Verftet</p>
@@ -70,7 +70,7 @@
 
 		<h3 class="konserter">Fredag 24. april</h3> 
 		<table class="tableimg" style="width:100%">
-			<tr>
+			<tr id="admiralP">
 				<td><img src="bilde/AdmiralP.jpg" width="144px"></td>
 				<td><h4>Admiral P</h4>
 					<p>USF Verftet</p>
@@ -78,12 +78,12 @@
 				</td>
 			</tr>
 			<tr>
-				<td><img src="bilde/Jaa9ogOnklP.jpg" width="144px"></td>
+				<td id="jaa9"><img src="bilde/Jaa9ogOnklP.jpg" width="144px"></td>
 				<td><h4>Jaa9 og OnklP</h4>
 					<p>USF Verftet</p>
 					<p>Rap</p></td>		
 			</tr>
-			<tr>
+			<tr id="egil">
 				<td><img src="bilde/EgilOlsen.jpg" width="144px"></td>
 				<td><h4>Egil Olsen</h4>
 					<p>Kvarteret</p>	
@@ -93,26 +93,26 @@
 
 		<h3 class="konserter">Lørdag 25. april</h3> 
 		<table class="tableimg" style="width:100%">
-			<tr>
+			<tr id="eva">
 				<td><img src="bilde/Eva+theHeartmaker.jpg" width="144px"></td>
 				<td><h4>Eva & the Heartmaker</h4>
 					<p>USF Verftet</p>
 					<p>Pop</p></td>	
 			</tr>
-			<tr>
+			<tr id="vamp">
 				<td><img src="bilde/Vamp.jpg" width="144px"></td>
 				<td><h4>Vamp</h4>
 					<p>Fana kulturhus</p>
 					<p>Folkemusikk</p></td>	
 
 			</tr>
-			<tr>
+			<tr id="triggerfinger">
 				<td><img src="bilde/Triggerfinger.jpg" width="144px"></td>
 				<td><h4>Triggerfinger</h4>
 					<p>Garage</p>
 					<p>Rock</p></td>			
 			</tr>
-			<tr>
+			<tr id="bfo">
 				<td><img src="bilde/BergenFilharmoniskeOrkester.jpg" width="144px"></td>
 				<td><h4>Bergen Filharmoniske Orkester</h4>
 					<p>Forum Scene</p>
@@ -122,11 +122,200 @@
 
 		<h3 class="konserter">Søndag 26. april</h3> 
 		<table class="tableimg" style="width:100%">
-			<tr>
+			<tr id="codySimpson">
 				<td><img src="bilde/CodySimpson.jpg" width="144px"></td>
 				<td><h4>Cody Simpson</h4><p>USF Verftet</p>		
-				<p>Pop</p></td> 
+					<p>Pop</p></td> 
 			</tr>
-		</table>          
+		</table>
+
+		<div id="artistInfo" class="hidden">
+			<button id="reportasje"></button>
+			<button id="bioKnapp"></button>
+			<button class="infoToggle" id="close"></button>
+			<h1></h1>
+			<p id="konsertInfo"></p>
+			<p id="distanse"></p>
+			<p id="bio"></p>
+			<div id="bioLyd" class="hidden"></div>
+		</div>
+		<script>
+			var coords = "60.388685, 5.326101";
+			$("#artistInfo").hide();
+			var currentArtist;
+			var currentLokale
+			$("#close").click(function() {
+				$("#bioLyd audio").trigger("pause");
+				$("#bioLyd").empty();
+				$("#bioKnapp, #reportasje").css("opacity", "0.1");
+				$("#artistInfo").fadeOut();
+				$("table, h3, h2").fadeIn();
+			});
+			$("#codySimpson").click(function(event){
+				console.log(event);
+				currentArtist=" Cody Simpson";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#egil").click(function(event){
+				console.log(event);
+				currentArtist=" Egil Olsen";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#vestlandsfanden").click(function(event){
+				console.log(event);
+				currentArtist=" Vestlandsfanden";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#bfo").click(function(event){
+				console.log(event);
+				currentArtist=" Bergen Filharmoniske Orkester";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#ebbot").click(function(event){
+				console.log(event);
+				currentArtist=" Ebbot Lundberg";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#herman").click(function(event){
+				console.log(event);
+				currentArtist=" Herman's Hermits";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#love").click(function(event){
+				console.log(event);
+				currentArtist=" Love Antell";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#katzenjammer").click(function(event){
+				console.log(event);
+				currentArtist=" Katzenjammer";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#admiralP").click(function(event){
+				console.log(event);
+				currentArtist=" Admiral P";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#jaa9").click(function(event){
+				console.log(event);
+				currentArtist=" Jaa9 og OnklP";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#eva").click(function(event){
+				console.log(event);
+				currentArtist=" Eva + the Heartmaker";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#vamp").click(function(event){
+				console.log(event);
+				currentArtist=" Vamp";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#triggerfinger").click(function(event){
+				console.log(event);
+				currentArtist=" Triggerfinger";
+				updateInfo();
+				$("#artistInfo").fadeIn();
+				$("table, h3, h2").fadeOut();
+			});
+			$("#bioKnapp").click(function() {
+				if(currentArtist == " Vestlandsfanden"){
+					$("#bioLyd audio").trigger("pause");
+					$("#bioLyd").empty();
+					$("#bioLyd").html("<audio src='/lydinnhold/test-vestlandsfanden.mp3' autoplay> </audio>");
+				}
+				if(currentArtist == " Katzenjammer"){
+					$("#bioLyd audio").trigger("pause");
+					$("#bioLyd").empty();
+					$("#bioLyd").html("<audio src='/lydinnhold/Katzenjammer.mp3' autoplay> </audio>");
+				}
+			});
+			$("#reportasje").click(function() {
+				if(currentArtist == " Egil Olsen"){
+					$("#bioLyd audio").trigger("pause");
+					$("#bioLyd").empty();
+					$("#bioLyd").html("<audio src='/lydinnhold/Reportasje.mp3' autoplay></audio>");
+				}
+			});
+			function degTilKonserten(lokale){
+				var splits = coords.split(", ");
+				var lat = splits[0];
+				var long = splits[1];
+				$.getJSON( "JSON/lokaler.json", function( json ){
+					$.each(json.konserter.lokaler, function( key, value){
+						if(value.location == lokale){
+
+							a = getDistanceFromLatLonInKm(lat, long, value.lat, value.long);
+							console.log(a);
+							$("#distanse").html("Distanse: " + a.toFixed(2) + " km");
+						}
+					});
+				});
+			}
+			function updateInfo(){
+				var currentLokale;
+				var currentTid;
+				var currentDato;
+				var currentPris;
+				$.getJSON( "JSON/lokaler.json", function( json ){
+					$.each(json.konserter.konserter, function( key, value){
+						if( " " + value.artist == currentArtist){
+							currentLokale = value.lokale;
+							currentTid = value.klokka;
+							currentDato = value.dato;
+							currentPris = value.pris;
+							degTilKonserten(currentLokale);
+							$("#konsertInfo").html("Hvor: " + currentLokale + "<br /> Når: " + currentDato + " " + currentTid + "<br /> CC:" + currentPris)
+						}
+					});
+				});
+				if(currentArtist == " Vestlandsfanden" || currentArtist == " Katzenjammer"){
+					$("#bioKnapp").css("opacity", "1");
+				}
+				if(currentArtist == " Egil Olsen"){
+					$("#reportasje").css("opacity", "1");
+				}
+			}
+			function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+				var R = 6371; // Radius of the earth in km
+				var dLat = deg2rad(lat2-lat1);  // deg2rad below
+				var dLon = deg2rad(lon2-lon1);
+				var a =
+					Math.sin(dLat/2) * Math.sin(dLat/2) +
+					Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+					Math.sin(dLon/2) * Math.sin(dLon/2)
+				;
+				var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+				var d = R * c; // Distance in km
+				return d;
+			}
+			function deg2rad(deg) {
+				return deg * (Math.PI/180);
+			}
+		</script>
 	</body>
 </html>
