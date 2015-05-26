@@ -188,6 +188,9 @@ font-size: 30px;
 .multiselect label {
 	display:block;
 }
+label{
+	width: 360px;
+}
 
 .multiselect-on {
 	color:#FFF;
