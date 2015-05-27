@@ -20,7 +20,9 @@ $(window).load(function(){
 	else{
 		var likte = [];
 	}
-	$(".jp-next, .jp-previous, #info").hide();
+	$(".jp-next, .jp-previous").hide();
+	$("#info").css("opacity", "0.1");
+	$('#info').addClass("unclickable");
 	$("#bioKnapp, #reportasje").css("opacity", "0.1");
 	//sjangre.push(null);
 	artister.push(null);
@@ -75,9 +77,6 @@ $(window).load(function(){
 		console.log(sjangre);
 		console.log(artister);
 	});
-	$(".jp-next").click(function() {
-		$("#info").fadeIn();
-	});
 	$("#liker").click(function(){
 		if($.inArray(currentArtist, likte) == -1 && currentArtist != null){
 			likte.push(currentArtist);
@@ -100,6 +99,8 @@ $(window).load(function(){
 		playSongs();
 		$(".jp-play").hide();
 		$(".jp-stop").show();
+		$("#info").css("opacity", "1");
+		$('#info').removeClass("unclickable");
 		if(playedSongs.length >= artister.length && playedSongs.length != 1){
 			sjangre.push("Folk");
 			sjangre.push("Rock");
@@ -165,7 +166,9 @@ $(window).load(function(){
 		}
 	});
 	$(".infoToggle").click(function () {
-		$("#artistInfo, #jp_container_1").slideToggle();
+		if($("#info").hasClass("unclickable")==false){
+			$("#artistInfo, #jp_container_1").slideToggle();
+		}
 	});
 
 	//bruker jplayer http://jplayer.org/latest/demo-02-jPlayerPlaylist/
