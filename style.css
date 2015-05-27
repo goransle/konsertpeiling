@@ -28,14 +28,16 @@ button{
 }
 .jp-play{
 	background-image: url("/ikon/spill.png");
-	height: 150px;
-	width: 150px;
+	height: 110px;
+	width: 110px;
+	margin-bottom: 1em;
 }
 .jp-stop{
 	background-image: url("/ikon/pause.png");
-	height: 150px;
-	width: 150px;
+	height: 110px;
+	width: 110px;
 	background-position: center;
+	margin-bottom: 1em;
 }
 .jp-next{
 	background-image: url("/ikon/nestesang.png");
@@ -81,7 +83,7 @@ button{
 }
 .jp-artist{
 	display: block;
-	font-size: 0.75em;
+	font-size: 0.8em;
 }
 #jquery_jplayer_1{
 	display: block;
@@ -94,18 +96,23 @@ a{
 .jp-duration, .jp-current-time{
 	display: inline;
 	color: white;
-	font-size: 1.5em;
+	font-size: 1.75em;
+
 }
 #info{
 	background-image: url(ikon/info.png);
 	float: left;
 	margin-left: 25%;
+	margin-top: 1em;
+
 
 }
 #liker{
 	background-image: url(ikon/liker.png);
 	float: right;
 	margin-right: 25%;
+	margin-top: 1em;
+
 }
 #close{
 	background-image: url(ikon/lukk.png);

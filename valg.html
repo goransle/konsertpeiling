@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/styles.css">
+		<!--		<link rel="stylesheet" href="css/fonts.css">-->
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	</head>
+
+	<body>
+		<div id="nav">  
+			<h1><a href="periode.html">Utforsk</a></h1>
+			<h1><a href="konserter.html">Konserter</a></h1>
+			<h1><a href="spilleliste.html">Samleliste</a></h1>
+		</div>
+		<div id="innstillinger">
+			<a href="innstillinger.html">
+				<img src="ikon/innstillinger.png" class="innstillinger" >
+			</a>                            
+		</div>
+		<audio src="" autoplay ></audio>
+		<script>
+			if(sessionStorage.length == 0){
+				$("audio").attr("src", "/lydinnhold/1stemme-test.mp3");
+				addStorage();
+			}
+			if(localStorage.key("lydAv")){
+				$("audio").attr("src", "");
+				addStorage();
+			}
+			if(localStorage.key("lydPa")){
+				$("audio").attr("src", "");
+				addStorage();
+			}
+			function addStorage() {
+				var key = "test";
+				var data = "test";
+				/* Set the session storage item */
+				if ("sessionStorage" in window) 
+				{
+					sessionStorage.setItem("loaded", "yes");
+					//location.reload();
+				} 
+			}
+		</script>
+	</body>
+</html>

@@ -20,7 +20,7 @@ $(window).load(function(){
 	else{
 		var likte = [];
 	}
-	$(".jp-next, .jp-previous").hide();
+	$(".jp-next, .jp-previous, #info").hide();
 	$("#bioKnapp, #reportasje").css("opacity", "0.1");
 	//sjangre.push(null);
 	artister.push(null);
@@ -75,6 +75,9 @@ $(window).load(function(){
 		console.log(sjangre);
 		console.log(artister);
 	});
+	$(".jp-next").click(function() {
+		$("#info").fadeIn();
+	});
 	$("#liker").click(function(){
 		if($.inArray(currentArtist, likte) == -1 && currentArtist != null){
 			likte.push(currentArtist);
@@ -117,6 +120,9 @@ $(window).load(function(){
 		$("#bioKnapp, #reportasje").css("opacity", "0.1");
 		$(".jp-stop").show();
 		$(".jp-play").hide();
+		$(".jp-next").show();
+		$(".jp-previous").show();
+
 	});
 	//
 	$("#hi").click(function () {
@@ -182,6 +188,8 @@ $(window).load(function(){
 		keyEnabled: true,
 		autoPlay: true,
 		loopOnPrevious: true,
+		repeat: '.jp-repeat',
+		shuffleOnLoop: true,
 		audioFullscreen: false,
 		optionsAudio: {
 			size: {

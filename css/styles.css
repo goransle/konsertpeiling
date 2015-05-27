@@ -1,6 +1,6 @@
 body {
 	background-color: black;
-	font-family: 'Roboto', sans-serif;
+	font-family: sans-serif;
 	font-style: normal;
 	color: white;
 	outline:none;
@@ -19,6 +19,15 @@ a {
 	color: #b7a4ce;
 	text-decoration:none;  
 } 
+#lydAv{
+	background-image: url(/ikon/mute.png);
+	display: block;
+}
+#lydPa{
+	background-image: url(/ikon/volum.png);
+	display: block;
+
+}
 
 p {
 	color: white;
@@ -121,7 +130,7 @@ h3  {
 	width: 300px;
 }
 ::-webkit-scrollbar { 
-    display: none; 
+	display: none; 
 }
 
 h4  {

@@ -13,4 +13,20 @@ window.onload = function () {
 		vibrer();
 		console.log("vibrerer");
 	});
+	$("#lydAv").click(function(){
+		addStorage();
+	});
+	$("#lydPa").click(function(){
+		localStorage.removeItem("lydAv");
+		sessionStorage.removeItem("loaded");
+	});
+}
+function addStorage() {
+	var key = "test";
+	var data = "test";
+	/* Set the session storage item */
+	if ("localStorage" in window) 
+	{
+		localStorage.setItem("lydAv", "yes");
+	} 
 }
