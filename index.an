@@ -1,8 +1,8 @@
 
 {
 
-	"expanded:images/sky.png":"nil",
-	"expanded:images/headphone3.png":"nil",
+	"expanded:images/hode4.png":"nil",
+	"expanded:images/Intro_start2.png":"nil",
 	"expanded:images/horbartbergen22.png":"nil",
 	"mediagroup_media/intro.mp3":"intro",
 	"pref__general__FilterNonAnimatedElements":"false",
@@ -13,7 +13,7 @@
 	"expanded:images/Intro_start.png":"nil",
 	"stage-Default Timeline_mark_ms":"-1",
 	"nextElementColorIndex":"3",
-	"pref__general__GenerateSmoothTransitions":"true",
+	"stage-Default Timeline_playhead_ms":"0",
 	"mediagroup_media/slutthb.mp3":"slutthb",
 	"expanded:images/hode5.png":"nil",
 	"expanded:images/headphone2.png":"nil",
@@ -36,12 +36,12 @@
 	"mediagroup_media/introhb.mp3":"introhb",
 	"expanded:images/sky4.png":"nil",
 	"expanded:images/sky2.png":"nil",
-	"stage-Default Timeline_playhead_ms":"0",
-	"expanded:images/horbartbergen2.png":"nil",
-	"expanded:images/sky3.png":"nil",
-	"expanded:images/hode4.png":"nil",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
-	"expanded:images/Intro_start2.png":"nil",
+	"pref__general__GenerateSmoothTransitions":"true",
+	"expanded:images/hode2.png":"nil",
+	"mediagroup_media/applause.mp3":"applause",
+	"expanded:images/headphone4.png":"nil",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"expanded:images/headphone3.png":"nil",
 	"symbol_stage":{
 		"element_${sky3}":{
 			"timelineColor2":"0x326a96",
@@ -61,13 +61,15 @@
 			"timelineColor3":"0x4a485e",
 			"animationEnabled":"false",
 			"timelineColor":"0x63599f"},
-		"dummyStageParentHeight":"480px",
-		"element_${horbartbergen2}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82",
-			"timelineTreeOpened":"false",
-			"animationEnabled":"false"},
+		"element_${introhb}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"timelineColor":"0xdb619d"},
+		"element_${sky}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"animationEnabled":"false",
+			"timelineColor":"0x00bda4"},
 		"element_${headphone3}":{
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
@@ -80,12 +82,16 @@
 			"timelineTreeOpened":"true",
 			"animationEnabled":"false",
 			"invisible":"false"},
-		"element_${sky4}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"animationEnabled":"true",
-			"timelineColor":"0x00a9fa"},
-		"defaultStageParentWidth":"360px",
+		"element_${applause}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"animationEnabled":"false",
+			"timelineColor":"0x91c767"},
+		"element_${hode42}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a096"},
 		"element_${hode43}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
@@ -96,15 +102,16 @@
 			"timelineColor3":"0x7b7652",
 			"animationEnabled":"true",
 			"timelineColor":"0xeedf79"},
-		"element_${introhb}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"timelineColor":"0xdb619d"},
-		"element_${headphone2}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
+		"element_${hode2}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
 			"animationEnabled":"false",
-			"timelineColor":"0x008dc8"},
+			"timelineColor":"0xffd46d"},
+		"element_${Stage}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"animationEnabled":"false",
+			"timelineColor":"0xeedf79"},
 		"element_${headphone42}":{
 			"timelineColor2":"0xd35d6e",
 			"timelineColor3":"0x7e4b52",
@@ -115,21 +122,21 @@
 			"timelineColor3":"0x295a6d",
 			"animationEnabled":"false",
 			"timelineColor":"0x008dc8"},
-		"element_${hode1}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"true",
-			"timelineColor":"0xdb619d"},
 		"element_${slutthb}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
 			"animationEnabled":"false",
 			"timelineColor":"0xeedf79"},
-		"element_${hode4}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
+		"element_${headphone4}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
 			"animationEnabled":"false",
-			"timelineColor":"0x91c767"},
+			"timelineColor":"0xceaef4"},
+		"element_${Intro_start2}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"false",
+			"timelineColor":"0x50bd82"},
 		"element_${sky2}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
@@ -141,61 +148,54 @@
 			"timelineColor3":"0x29647e",
 			"animationEnabled":"false",
 			"timelineColor":"0x00a9fa"},
-		"element_${Intro_start2}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
+		"element_${hode4}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"false",
-			"timelineColor":"0x50bd82"},
+			"timelineColor":"0x91c767"},
 		"element_${hode5}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
 			"animationEnabled":"true",
 			"timelineColor":"0xceaef4"},
-		"element_${headphone4}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"animationEnabled":"false",
-			"timelineColor":"0xceaef4"},
+		"element_${hode1}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"true",
+			"timelineColor":"0xdb619d"},
 		"defaultStageParentHeight":"480px",
-		"element_${Stage}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
+		"element_${horbartbergen2}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"timelineColor":"0x50bd82",
+			"timelineTreeOpened":"false",
+			"animationEnabled":"false"},
+		"element_${sky4}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"true",
+			"timelineColor":"0x00a9fa"},
+		"defaultStageParentWidth":"360px",
+		"dummyStageParentHeight":"480px",
+		"element_${headphone2}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
 			"animationEnabled":"false",
-			"timelineColor":"0xeedf79"},
-		"element_${hode2}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"animationEnabled":"false",
-			"timelineColor":"0xffd46d"},
-		"element_${hode42}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"animationEnabled":"false",
-			"timelineColor":"0x00a096"},
-		"element_${applause}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"animationEnabled":"false",
-			"timelineColor":"0x91c767"},
-		"element_${sky}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"animationEnabled":"false",
-			"timelineColor":"0x00bda4"},
+			"timelineColor":"0x008dc8"},
 		"element_${Intro_start}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"true",
 			"timelineColor":"0x91c767"}},
 	"TransitionIdCounter":"125",
-	"viewStartY":"56",
-	"expanded:images/hode3.png":"nil",
-	"pref__general__AutoKeyframeProperties":"true",
-	"expanded:images/hode1.png":"nil",
+	"expanded:images/sky.png":"nil",
+	"expanded:images/horbartbergen2.png":"nil",
 	"HTMLFileName":"index.html",
+	"expanded:images/hode1.png":"nil",
+	"pref__general__AutoKeyframeProperties":"true",
 	"usedBOM":"false",
 	"expanded:images/hode42.png":"nil",
-	"expanded:images/headphone4.png":"nil",
-	"mediagroup_media/applause.mp3":"applause",
-	"expanded:images/hode2.png":"nil",
+	"expanded:images/hode3.png":"nil",
+	"expanded:images/sky3.png":"nil",
+	"viewStartY":"56",
 	"expanded:images/headphone42.png":"nil"}

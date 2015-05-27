@@ -4,16 +4,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
 		<title>index</title>
 		<!--Adobe Edge Runtime-->
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<script type="text/javascript" charset="utf-8" src="edge_includes/edge.5.0.1.min.js"></script>
+		<script src="js/jquery-2.1.3.min.js"></script>
+
 		<style>
 			.edgeLoad-EDGE-11372302 { visibility:hidden; }
-			body{
-				overflow:hidden;
-			}
 		</style>
 		<script>
 			AdobeEdge.loadComposition('index', 'EDGE-11372302', {
@@ -26,7 +24,11 @@
 			}, {dom: [ ]}, {dom: [ ]});
 			setTimeout(function() {
 				window.location.href = "valg.html";
-			}, 15000);		</script>
+			}, 13000);
+			$(document).click(function(){
+				window.location.href = "valg.html";
+			});
+		</script>
 		<!--Adobe Edge Runtime End-->
 
 	</head>

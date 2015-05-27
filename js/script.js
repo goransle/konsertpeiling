@@ -21,8 +21,10 @@ $(window).load(function(){
 		var likte = [];
 	}
 	$(".jp-next, .jp-previous").hide();
-	$("#info").css("opacity", "0.1");
+	$("#info, #liker").css("opacity", "0.1");
 	$('#info').addClass("unclickable");
+	$('#liker').addClass("unclickable");
+	$('#jp-playlist-current').addClass("unclickable");
 	$("#bioKnapp, #reportasje").css("opacity", "0.1");
 	//sjangre.push(null);
 	artister.push(null);
@@ -68,7 +70,7 @@ $(window).load(function(){
 	clear();
 	$(".jp-stop").hide();
 
-	$(".jp-play").click(function() {
+	$(".jp-play, a.jp-playlist-item").click(function() {
 		$(".jp-play").hide();
 		$(".jp-stop").show();
 		$(".jp-next").fadeIn();
@@ -78,17 +80,28 @@ $(window).load(function(){
 		console.log(artister);
 	});
 	$("#liker").click(function(){
-		if($.inArray(currentArtist, likte) == -1 && currentArtist != null){
-			likte.push(currentArtist);
-			localStorage.setItem('testStorage', JSON.stringify(likte));
+		if($("#liker").hasClass("unclickable")==false){
+			if($.inArray(currentArtist, likte) == -1 && currentArtist != null){
+				likte.push(currentArtist);
+				localStorage.setItem('testStorage', JSON.stringify(likte));
+			}
 		}
 
 	});
 	$("#jp_container_1").bind($.jPlayer.event.play, function(event) {
 		updatePoster();
+		$(".jp-play").hide();
+		$(".jp-stop").show();
+		$(".jp-next").fadeIn();
+		$(".jp-previous").fadeIn();
+		rekalkuler();
 	});
 	$("#jp_container_1").bind($.jPlayer.event.ended, function(event) {
 		rekalkuler();
+		$("#info, #liker").css("opacity", "1");
+		$('#info, #liker').removeClass("unclickable");
+
+
 	});	
 	$(".jp-stop").click(function() {
 		$(".jp-stop").hide();
@@ -99,8 +112,8 @@ $(window).load(function(){
 		playSongs();
 		$(".jp-play").hide();
 		$(".jp-stop").show();
-		$("#info").css("opacity", "1");
-		$('#info').removeClass("unclickable");
+		$("#info, #liker").css("opacity", "1");
+		$('#info, #liker').removeClass("unclickable");
 		if(playedSongs.length >= artister.length && playedSongs.length != 1){
 			sjangre.push("Folk");
 			sjangre.push("Rock");
@@ -177,10 +190,10 @@ $(window).load(function(){
 		cssSelectorAncestor: "#jp_container_1"
 	}, [
 		{
-			title:"Medicines",
-			artist:"The Taxpayers",
-			mp3:"/media/medicines.mp3",
-			poster: "/media/medicines.jpg"
+			title:"Referansetone",
+			artist:"hb",
+			mp3:"/lydinnhold/referansetone.mp3",
+			poster: "/bilde/hb.jpg"
 		}
 	], {
 		playlistOptions: {

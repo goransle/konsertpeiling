@@ -92,13 +92,13 @@
                         '${Stage}': {
                             isStage: true,
                             rect: ['null', 'null', '360px', '480px', 'auto', 'auto'],
-                            overflow: 'visible',
+                            overflow: 'hidden',
                             fill: ["rgba(190,216,236,1.00)"]
                         }
                     }
                 },
                 timeline: {
-                    duration: 12564.898,
+                    duration: 9000,
                     autoPlay: true,
                     data: [
                         [
@@ -112,16 +112,6 @@
                             '303px'
                         ],
                         [
-                            "eid122",
-                            "opacity",
-                            2000,
-                            250,
-                            "easeInOutQuint",
-                            "${Intro_start}",
-                            '0',
-                            '1'
-                        ],
-                        [
                             "eid124",
                             "top",
                             2000,
@@ -130,16 +120,6 @@
                             "${Intro_start}",
                             '336px',
                             '336px'
-                        ],
-                        [
-                            "eid121",
-                            "top",
-                            7250,
-                            500,
-                            "linear",
-                            "${hode3}",
-                            '-349px',
-                            '-145px'
                         ],
                         [
                             "eid74",
@@ -182,14 +162,14 @@
                             '-116px'
                         ],
                         [
-                            "eid83",
-                            "left",
-                            4500,
-                            2500,
-                            "easeInExpo",
-                            "${sky4}",
-                            '407px',
-                            '232px'
+                            "eid121",
+                            "top",
+                            7250,
+                            500,
+                            "linear",
+                            "${hode3}",
+                            '-349px',
+                            '-145px'
                         ],
                         [
                             "eid85",
@@ -200,6 +180,26 @@
                             "${sky3}",
                             '-130px',
                             '12px'
+                        ],
+                        [
+                            "eid83",
+                            "left",
+                            4500,
+                            2500,
+                            "easeInExpo",
+                            "${sky4}",
+                            '407px',
+                            '232px'
+                        ],
+                        [
+                            "eid122",
+                            "opacity",
+                            2000,
+                            250,
+                            "easeInOutQuint",
+                            "${Intro_start}",
+                            '0',
+                            '1'
                         ]
                     ]
                 }
